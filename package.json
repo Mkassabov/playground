@@ -14,6 +14,6 @@
 		"deployments/*"
 	],
 	"dependencies": {
-		"alchemy": "D:/code/OSS/alchemy/alchemy/alchemy"
+		"alchemy": "link:alchemy"
 	}
 }

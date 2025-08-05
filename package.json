@@ -2,15 +2,9 @@
 	"name": "playground",
 	"module": "index.ts",
 	"type": "module",
-	"scripts": {
-		"test1": "rm -rf .alchemy && bun run run1.ts",
-		"test2": "rm -rf .alchemy && bun run run2.ts",
-		"alchemy": "bun run alchemy.run.ts",
-		"delete": "rm -rf dist && rm -rf .alchemy",
-		"alchemy-scratch": "rm -rf dist && rm -rf .alchemy && bun run alchemy.run.ts"
-	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
+		"@biomejs/biome": "2.1.3",
+		"@cloudflare/workers-types": "^4.20250805.0",
 		"@types/bun": "latest"
 	},
 	"peerDependencies": {
@@ -20,11 +14,6 @@
 		"deployments/*"
 	],
 	"dependencies": {
-		"alchemy": "D:/code/OSS/alchemy/alchemy/alchemy",
-		"esbuild": "^0.25.5",
-		"miniflare": "^4.20250617.4",
-		"pathe": "^2.0.3",
-		"vite": "^7.0.2",
-		"wrangler": "^4.22.0"
+		"alchemy": "D:/code/OSS/alchemy/alchemy/alchemy"
 	}
 }

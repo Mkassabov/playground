@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": ["../../../deployments/alchemy-worker/src/taptap.ts"],
+  "sourceRoot": ".alchemy/out/taptap",
+  "sourcesContent": ["import type { taptap } from \"../../../alchemy.run\";\n\nexport default {\n\t// biome-ignore lint/suspicious/useAwait: its fine\n\tasync fetch(_request: Request, _env: typeof taptap.Env): Promise<Response> {\n\t\treturn new Response(\"Haiii - taptap!\");\n\t},\n};\n"],
+  "mappings": ";AAEA,IAAO,iBAAQ;AAAA;AAAA,EAEd,MAAM,MAAM,UAAmB,MAA4C;AAC1E,WAAO,IAAI,SAAS,iBAAiB;AAAA,EACtC;AACD;",
+  "names": []
+}

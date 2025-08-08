@@ -1,13 +1,6 @@
 import alchemy from "alchemy";
-import { DurableObjectNamespace, Worker } from "alchemy/cloudflare";
-import type { Counter } from "./deployments/alchemy-worker/src/patpat";
+import { Worker } from "alchemy/cloudflare";
 
-// import { File } from "alchemy/fs";
-
-const counter = DurableObjectNamespace<Counter>("Counter", {
-	className: "Counter",
-	sqlite: true,
-});
 export const app = await alchemy("alchemy-test", {
 	stage: "dev",
 	phase: process.argv.includes("--destroy") ? "destroy" : "up",
@@ -15,11 +8,28 @@ export const app = await alchemy("alchemy-test", {
 	telemetry: false,
 });
 
-export const worker = await Worker("patpat", {
-	script: "./deployments/alchemy-worker/src/patpat.ts",
-	bindings: {
-		COUNTER: counter,
-	},
+console.log("Alchemy Start");
+console.log("Alchemy Start");
+console.log("Alchemy Start");
+console.log("Alchemy Start");
+console.log("Alchemy Start");
+
+export const patpat = await Worker("patpat", {
+	entrypoint: "./deployments/alchemy-worker/src/patpat.ts",
 });
 
-await app.finalize();
+console.log("Patpat");
+
+export const taptap = await Worker("taptap", {
+	entrypoint: "./deployments/alchemy-worker/src/taptap.ts",
+});
+
+console.log("Taptap");
+
+while (true) {
+	console.log("BK Check");
+	console.log("PRE");
+	console.log("breakpoint?");
+	console.log("POST");
+	await new Promise((resolve) => setTimeout(resolve, 1000));
+}

@@ -1,0 +1,1 @@
+bunx alchemy dev --wait-for-debugger 2>&1 | Where-Object { $_ -notmatch "is not in the project directory and will not be watched" }

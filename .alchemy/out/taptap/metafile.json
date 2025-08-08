@@ -1,0 +1,30 @@
+{
+  "inputs": {
+    "deployments/alchemy-worker/src/taptap.ts": {
+      "bytes": 249,
+      "imports": [],
+      "format": "esm"
+    }
+  },
+  "outputs": {
+    ".alchemy/out/taptap/taptap.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 549
+    },
+    ".alchemy/out/taptap/taptap.js": {
+      "imports": [],
+      "exports": [
+        "default"
+      ],
+      "entryPoint": "deployments/alchemy-worker/src/taptap.ts",
+      "inputs": {
+        "deployments/alchemy-worker/src/taptap.ts": {
+          "bytesInOutput": 159
+        }
+      },
+      "bytes": 278
+    }
+  }
+}

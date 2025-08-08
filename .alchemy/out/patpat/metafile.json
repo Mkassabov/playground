@@ -1,0 +1,30 @@
+{
+  "inputs": {
+    "deployments/alchemy-worker/src/patpat.ts": {
+      "bytes": 154,
+      "imports": [],
+      "format": "esm"
+    }
+  },
+  "outputs": {
+    ".alchemy/out/patpat/patpat.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 439
+    },
+    ".alchemy/out/patpat/patpat.js": {
+      "imports": [],
+      "exports": [
+        "default"
+      ],
+      "entryPoint": "deployments/alchemy-worker/src/patpat.ts",
+      "inputs": {
+        "deployments/alchemy-worker/src/patpat.ts": {
+          "bytesInOutput": 145
+        }
+      },
+      "bytes": 264
+    }
+  }
+}

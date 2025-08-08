@@ -1,0 +1,32 @@
+{
+  "kind": "cloudflare::Worker",
+  "id": "taptap",
+  "fqn": "alchemy-test/dev/taptap",
+  "seq": 1,
+  "data": {},
+  "status": "updated",
+  "output": {
+    "Symbol(alchemy::ResourceKind)": "cloudflare::Worker",
+    "Symbol(alchemy::ResourceID)": "taptap",
+    "Symbol(alchemy::ResourceFQN)": "alchemy-test/dev/taptap",
+    "Symbol(alchemy::ResourceScope)": {
+      "@scope": null
+    },
+    "Symbol(alchemy::ResourceSeq)": 1,
+    "type": "service",
+    "id": "taptap",
+    "entrypoint": "./deployments/alchemy-worker/src/taptap.ts",
+    "name": "taptap",
+    "cwd": "",
+    "compatibilityDate": "2025-08-06",
+    "compatibilityFlags": [],
+    "format": "esm",
+    "bindings": {},
+    "createdAt": 1754461074757,
+    "updatedAt": 1754574784396,
+    "url": "http://localhost:1339"
+  },
+  "props": {
+    "entrypoint": "./deployments/alchemy-worker/src/taptap.ts"
+  }
+}

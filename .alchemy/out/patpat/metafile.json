@@ -1,7 +1,7 @@
 {
   "inputs": {
     "deployments/alchemy-worker/src/patpat.ts": {
-      "bytes": 154,
+      "bytes": 177,
       "imports": [],
       "format": "esm"
     }
@@ -11,7 +11,7 @@
       "imports": [],
       "exports": [],
       "inputs": {},
-      "bytes": 439
+      "bytes": 488
     },
     ".alchemy/out/patpat/patpat.js": {
       "imports": [],
@@ -21,10 +21,10 @@
       "entryPoint": "deployments/alchemy-worker/src/patpat.ts",
       "inputs": {
         "deployments/alchemy-worker/src/patpat.ts": {
-          "bytesInOutput": 145
+          "bytesInOutput": 170
         }
       },
-      "bytes": 264
+      "bytes": 289
     }
   }
 }

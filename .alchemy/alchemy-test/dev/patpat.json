@@ -13,18 +13,23 @@
       "@scope": null
     },
     "Symbol(alchemy::ResourceSeq)": 0,
+    "entrypoint": "./deployments/alchemy-worker/src/patpat.ts",
     "type": "service",
     "id": "patpat",
-    "entrypoint": "./deployments/alchemy-worker/src/patpat.ts",
     "name": "patpat",
     "cwd": "",
-    "compatibilityDate": "2025-08-06",
+    "compatibilityDate": "2025-08-16",
     "compatibilityFlags": [],
     "format": "esm",
     "bindings": {},
-    "createdAt": 1754461074635,
-    "updatedAt": 1754574784137,
-    "url": "http://localhost:1338"
+    "createdAt": 1755637295027,
+    "updatedAt": 1756399390282,
+    "url": "http://localhost:1338",
+    "routes": [],
+    "domains": [],
+    "dev": {
+      "hasRemote": false
+    }
   },
   "props": {
     "entrypoint": "./deployments/alchemy-worker/src/patpat.ts"

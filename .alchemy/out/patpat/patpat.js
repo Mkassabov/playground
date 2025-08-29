@@ -2,6 +2,7 @@
 var patpat_default = {
   // biome-ignore lint/suspicious/useAwait: its fine
   async fetch() {
+    console.log("test");
     return new Response("Haiii - patpat!");
   }
 };

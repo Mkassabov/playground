@@ -1,22 +1,41 @@
 {
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "label": "start-alchemy-dev",
-      "type": "shell",
-      "command": "powershell",
-      "args": ["-ExecutionPolicy", "Bypass", "-File", "./dev.ps1"],
-      "isBackground": true,
-      "problemMatcher": {
-        "pattern": {
-          "regexp": "^$"
-        },
-        "background": {
-          "activeOnStart": true,
-          "beginsPattern": ".*",
-          "endsPattern": ".*\\[CoreCDPServer\\] Root CDP registered\\. Available servers: alchemy.*"
-        }
-      }
-    }
-  ]
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "start-alchemy-dev-bun",
+			"type": "shell",
+			// "command": "bun",
+			// "args": ["alchemy", "dev", "--inspect-"],
+			"command": "powershell",
+			"args": ["-ExecutionPolicy", "Bypass", "-File", "./bun.ps1"],
+			"isBackground": true,
+			"problemMatcher": {
+				"pattern": {
+					"regexp": "^$"
+				},
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": ".*",
+					"endsPattern": "Waiting for inspector to connect.*"
+				}
+			}
+		},
+		{
+			"label": "start-alchemy-dev-node",
+			"type": "shell",
+			"command": "powershell",
+			"args": ["-ExecutionPolicy", "Bypass", "-File", "./npx.ps1"],
+			"isBackground": true,
+			"problemMatcher": {
+				"pattern": {
+					"regexp": "^$"
+				},
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": ".*",
+					"endsPattern": "Waiting for inspector to connect.*"
+				}
+			}
+		}
+	]
 }

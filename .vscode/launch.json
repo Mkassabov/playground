@@ -3,21 +3,50 @@
 	// Hover to view descriptions of existing attributes.
 	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
 	"version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Launch & Attach Debugger",
-      "type": "bun",
-      "request": "attach",
-      "url": "ws://localhost:1337/servers/alchemy",
-      "stopOnEntry": false,
-      "preLaunchTask": "start-alchemy-dev"
-    },
-    {
-      "name": "Attach Debugger",
-      "type": "bun",
-      "request": "attach",
-      "url": "ws://localhost:1337/servers/alchemy",
-      "stopOnEntry": false,
-    }
-  ]
+	"configurations": [
+		{
+			"name": "Launch Node & Attach Debugger",
+			"type": "bun",
+			"request": "attach",
+			"url": "${input:debugUrl}",
+			"stopOnEntry": false,
+			"preLaunchTask": "start-alchemy-dev-node"
+		},
+		{
+			"name": "Launch Bun & Attach Debugger",
+			"type": "bun",
+			"request": "attach",
+			"url": "${input:debugUrl}",
+			"stopOnEntry": false,
+			"preLaunchTask": "start-alchemy-dev-bun"
+		},
+		{
+			"name": "Attach Debugger",
+			"type": "bun",
+			"request": "attach",
+			"url": "${input:debugUrl}",
+			"stopOnEntry": false
+		}
+	],
+	"inputs": [
+		{
+			"id": "debugUrl",
+			"type": "command",
+			"command": "extension.commandvariable.pickStringRemember",
+			"args": {
+				"description": "Which resource do you want to debug?",
+				"fileName": "${workspaceFolder}/.alchemy/.debugger-urls",
+				"pattern": {
+					"regexp": "^([^=]+)=(.+)$",
+					"flags": "gm",
+					"match": "find",
+					"option": {
+						"label": "$1",
+						"value": "$2",
+						"description": "$2"
+					}
+				}
+			}
+		}
+	]
 }

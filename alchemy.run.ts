@@ -10,4 +10,10 @@ export const app = await alchemy("alchemy-test", {
 
 export const patpat = await Worker("patpat", {
 	entrypoint: "./deployments/alchemy-worker/src/patpat.ts",
+	url: true,
 });
+
+console.log(patpat.url);
+
+const res = await fetch(patpat.url!);
+console.log(await res.text());

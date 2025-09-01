@@ -1,0 +1,30 @@
+{
+  "inputs": {
+    "deployments/alchemy-worker/src/patpat.ts": {
+      "bytes": 177,
+      "imports": [],
+      "format": "esm"
+    }
+  },
+  "outputs": {
+    ".alchemy/out/alchemy-test-cdp-patpat-dev/patpat.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 509
+    },
+    ".alchemy/out/alchemy-test-cdp-patpat-dev/patpat.js": {
+      "imports": [],
+      "exports": [
+        "default"
+      ],
+      "entryPoint": "deployments/alchemy-worker/src/patpat.ts",
+      "inputs": {
+        "deployments/alchemy-worker/src/patpat.ts": {
+          "bytesInOutput": 170
+        }
+      },
+      "bytes": 289
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "cloudflare::WorkerSubdomain",
+  "id": "url",
+  "fqn": "alchemy-test-cdp/dev/patpat/url",
+  "seq": 0,
+  "data": {},
+  "status": "created",
+  "output": {
+    "Symbol(alchemy::ResourceKind)": "cloudflare::WorkerSubdomain",
+    "Symbol(alchemy::ResourceID)": "url",
+    "Symbol(alchemy::ResourceFQN)": "alchemy-test-cdp/dev/patpat/url",
+    "Symbol(alchemy::ResourceScope)": {
+      "@scope": null
+    },
+    "Symbol(alchemy::ResourceSeq)": 0,
+    "url": "https://unavailable.alchemy.run"
+  },
+  "props": {
+    "scriptName": "alchemy-test-cdp-patpat-dev",
+    "retain": false,
+    "dev": true
+  }
+}

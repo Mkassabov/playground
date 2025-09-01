@@ -1,7 +1,7 @@
 import alchemy from "alchemy";
 import { Worker } from "alchemy/cloudflare";
 
-export const app = await alchemy("alchemy-test", {
+export const app = await alchemy("alchemy-test-cdp", {
 	stage: "dev",
 	phase: process.argv.includes("--destroy") ? "destroy" : "up",
 	password: process.env.ALCHEMY_PASSWORD,
@@ -11,3 +11,8 @@ export const app = await alchemy("alchemy-test", {
 export const patpat = await Worker("patpat", {
 	entrypoint: "./deployments/alchemy-worker/src/patpat.ts",
 });
+
+while (true) {
+	console.log("tick");
+	await new Promise((resolve) => setTimeout(resolve, 800));
+}

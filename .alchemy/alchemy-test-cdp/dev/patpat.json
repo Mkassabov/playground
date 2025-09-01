@@ -1,0 +1,37 @@
+{
+  "kind": "cloudflare::Worker",
+  "id": "patpat",
+  "fqn": "alchemy-test-cdp/dev/patpat",
+  "seq": 0,
+  "data": {},
+  "status": "updated",
+  "output": {
+    "Symbol(alchemy::ResourceKind)": "cloudflare::Worker",
+    "Symbol(alchemy::ResourceID)": "patpat",
+    "Symbol(alchemy::ResourceFQN)": "alchemy-test-cdp/dev/patpat",
+    "Symbol(alchemy::ResourceScope)": {
+      "@scope": null
+    },
+    "Symbol(alchemy::ResourceSeq)": 0,
+    "entrypoint": "./deployments/alchemy-worker/src/patpat.ts",
+    "type": "service",
+    "id": "patpat",
+    "name": "alchemy-test-cdp-patpat-dev",
+    "cwd": "",
+    "compatibilityDate": "2025-08-26",
+    "compatibilityFlags": [],
+    "format": "esm",
+    "bindings": {},
+    "createdAt": 1756461035694,
+    "updatedAt": 1756462412205,
+    "url": "http://localhost:1338",
+    "routes": [],
+    "domains": [],
+    "dev": {
+      "hasRemote": false
+    }
+  },
+  "props": {
+    "entrypoint": "./deployments/alchemy-worker/src/patpat.ts"
+  }
+}

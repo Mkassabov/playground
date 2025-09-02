@@ -1,0 +1,30 @@
+{
+  "inputs": {
+    "deployments/alchemy-worker/src/consumer.ts": {
+      "bytes": 837,
+      "imports": [],
+      "format": "esm"
+    }
+  },
+  "outputs": {
+    ".alchemy/out/alchemy-test-queue-bug-consumer-dev/consumer.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 1634
+    },
+    ".alchemy/out/alchemy-test-queue-bug-consumer-dev/consumer.js": {
+      "imports": [],
+      "exports": [
+        "default"
+      ],
+      "entryPoint": "deployments/alchemy-worker/src/consumer.ts",
+      "inputs": {
+        "deployments/alchemy-worker/src/consumer.ts": {
+          "bytesInOutput": 781
+        }
+      },
+      "bytes": 906
+    }
+  }
+}

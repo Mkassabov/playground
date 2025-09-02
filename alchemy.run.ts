@@ -1,9 +1,11 @@
 import alchemy from "alchemy";
-import { Worker, Queue, WranglerJson } from "alchemy/cloudflare";
+import { Worker, Queue } from "alchemy/cloudflare";
+
+const REMOTE = false;
 
 export const app = await alchemy("alchemy-test-queue-bug", {
 	stage: "dev",
-	phase: process.argv.includes("--destroy") ? "destroy" : "up",
+	// phase: process.argv.includes("--destroy") ? "destroy" : "up",
 	password: process.env.ALCHEMY_PASSWORD,
 	telemetry: false,
 });
@@ -13,13 +15,18 @@ export const taskQueue = await Queue<{
 	taskId: string;
 	data: unknown;
 }>("task-queue", {
-	dev: {},
+	dev: {
+		remote: REMOTE,
+	},
 });
 
 export const producer = await Worker("producer", {
 	entrypoint: "./deployments/alchemy-worker/src/producer.ts",
 	bindings: {
 		TASK_QUEUE: taskQueue,
+	},
+	dev: {
+		remote: REMOTE,
 	},
 });
 
@@ -29,10 +36,7 @@ export const consumer = await Worker("consumer", {
 		TASK_QUEUE: taskQueue,
 	},
 	eventSources: [taskQueue],
+	dev: {
+		remote: REMOTE,
+	},
 });
-
-const wranglerJson = await WranglerJson({
-	worker: producer,
-});
-
-console.log(wranglerJson);

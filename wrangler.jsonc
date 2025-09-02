@@ -1,13 +1,13 @@
 {
-  "name": "alchemy-test-queue-bug-patpat-dev",
-  "main": "deployments\\alchemy-worker\\src\\patpat.ts",
+  "name": "alchemy-test-queue-bug-producer-dev",
+  "main": "deployments\\alchemy-worker\\src\\producer.ts",
   "compatibility_date": "2025-08-26",
   "compatibility_flags": [],
   "queues": {
     "producers": [
       {
         "binding": "TASK_QUEUE",
-        "queue": "f86801583f01473e84ba14778b215a27"
+        "queue": "task-queue"
       }
     ],
     "consumers": []

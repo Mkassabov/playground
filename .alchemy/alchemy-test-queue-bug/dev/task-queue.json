@@ -4,7 +4,7 @@
   "fqn": "alchemy-test-queue-bug/dev/task-queue",
   "seq": 0,
   "data": {},
-  "status": "created",
+  "status": "updated",
   "output": {
     "Symbol(alchemy::ResourceKind)": "cloudflare::Queue",
     "Symbol(alchemy::ResourceID)": "task-queue",
@@ -21,16 +21,17 @@
       "messageRetentionPeriod": 345600
     },
     "createdOn": "2025-09-02T07:29:04.198844Z",
-    "modifiedOn": "2025-09-02T07:29:04.198844Z",
+    "modifiedOn": "2025-09-02T07:59:29.839303Z",
     "accountId": "3a00d2d136f0e066b8e6761b6cff4895",
     "dev": {
       "id": "task-queue",
-      "remote": false
+      "remote": true
     }
   },
   "props": {
     "dev": {
-      "force": false
+      "remote": true,
+      "force": true
     }
   }
 }

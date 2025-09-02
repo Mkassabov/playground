@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": ["../../../deployments/alchemy-worker/src/consumer.ts"],
+  "sourceRoot": ".alchemy/out/alchemy-test-queue-bug-consumer-dev",
+  "sourcesContent": ["import type { consumer } from \"../../../alchemy.run\";\n\nexport default {\n\t// biome-ignore lint/suspicious/useAwait: its fine\n\tasync queue(\n\t\tbatch: MessageBatch<{ taskId: string; data: unknown }>,\n\t\t_env: typeof consumer.Env,\n\t): Promise<void> {\n\t\tconsole.log(\n\t\t\t\"[CONSUMER] Processing batch with\",\n\t\t\tbatch.messages.length,\n\t\t\t\"messages\",\n\t\t);\n\n\t\tfor (const message of batch.messages) {\n\t\t\ttry {\n\t\t\t\tconsole.log(\"[CONSUMER] Processing message:\", {\n\t\t\t\t\ttaskId: message.body.taskId,\n\t\t\t\t\tdata: message.body.data,\n\t\t\t\t\ttimestamp: new Date().toISOString(),\n\t\t\t\t});\n\n\t\t\t\tconsole.log(\"[CONSUMER] Message data:\", message.body.data);\n\n\t\t\t\tmessage.ack();\n\t\t\t\tconsole.log(\"[CONSUMER] Message acknowledged successfully\");\n\t\t\t} catch (error) {\n\t\t\t\tconsole.error(\"[CONSUMER] Error processing message:\", error);\n\t\t\t\tmessage.retry();\n\t\t\t}\n\t\t}\n\t},\n};\n"],
+  "mappings": ";AAEA,IAAO,mBAAQ;AAAA;AAAA,EAEd,MAAM,MACL,OACA,MACgB;AAChB,YAAQ;AAAA,MACP;AAAA,MACA,MAAM,SAAS;AAAA,MACf;AAAA,IACD;AAEA,eAAW,WAAW,MAAM,UAAU;AACrC,UAAI;AACH,gBAAQ,IAAI,kCAAkC;AAAA,UAC7C,QAAQ,QAAQ,KAAK;AAAA,UACrB,MAAM,QAAQ,KAAK;AAAA,UACnB,YAAW,oBAAI,KAAK,GAAE,YAAY;AAAA,QACnC,CAAC;AAED,gBAAQ,IAAI,4BAA4B,QAAQ,KAAK,IAAI;AAEzD,gBAAQ,IAAI;AACZ,gBAAQ,IAAI,8CAA8C;AAAA,MAC3D,SAAS,OAAO;AACf,gBAAQ,MAAM,wCAAwC,KAAK;AAC3D,gBAAQ,MAAM;AAAA,MACf;AAAA,IACD;AAAA,EACD;AACD;",
+  "names": []
+}

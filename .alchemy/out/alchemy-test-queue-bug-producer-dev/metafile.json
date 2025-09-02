@@ -1,0 +1,30 @@
+{
+  "inputs": {
+    "deployments/alchemy-worker/src/producer.ts": {
+      "bytes": 1127,
+      "imports": [],
+      "format": "esm"
+    }
+  },
+  "outputs": {
+    ".alchemy/out/alchemy-test-queue-bug-producer-dev/producer.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 2203
+    },
+    ".alchemy/out/alchemy-test-queue-bug-producer-dev/producer.js": {
+      "imports": [],
+      "exports": [
+        "default"
+      ],
+      "entryPoint": "deployments/alchemy-worker/src/producer.ts",
+      "inputs": {
+        "deployments/alchemy-worker/src/producer.ts": {
+          "bytesInOutput": 1120
+        }
+      },
+      "bytes": 1245
+    }
+  }
+}

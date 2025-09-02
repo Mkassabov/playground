@@ -1,14 +1,10 @@
 import type { consumer } from "../../../alchemy.run";
 
 export default {
-	async fetch(request: Request, env: typeof consumer.Env): Promise<Response> {
-		console.log("[CONSUMER] HTTP endpoint called");
-		return new Response("Consumer is running!");
-	},
-
+	// biome-ignore lint/suspicious/useAwait: its fine
 	async queue(
 		batch: MessageBatch<{ taskId: string; data: unknown }>,
-		env: typeof consumer.Env,
+		_env: typeof consumer.Env,
 	): Promise<void> {
 		console.log(
 			"[CONSUMER] Processing batch with",

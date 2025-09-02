@@ -1,19 +1,38 @@
 import alchemy from "alchemy";
-import { Worker } from "alchemy/cloudflare";
+import { Worker, Queue, WranglerJson } from "alchemy/cloudflare";
 
-export const app = await alchemy("alchemy-test", {
+export const app = await alchemy("alchemy-test-queue-bug", {
 	stage: "dev",
 	phase: process.argv.includes("--destroy") ? "destroy" : "up",
 	password: process.env.ALCHEMY_PASSWORD,
 	telemetry: false,
 });
 
-export const patpat = await Worker("patpat", {
-	entrypoint: "./deployments/alchemy-worker/src/patpat.ts",
-	url: true,
+// Create a queue for processing tasks
+export const taskQueue = await Queue<{
+	taskId: string;
+	data: unknown;
+}>("task-queue", {
+	dev: {},
 });
 
-console.log(patpat.url);
+export const producer = await Worker("producer", {
+	entrypoint: "./deployments/alchemy-worker/src/producer.ts",
+	bindings: {
+		TASK_QUEUE: taskQueue,
+	},
+});
 
-const res = await fetch(patpat.url!);
-console.log(await res.text());
+export const consumer = await Worker("consumer", {
+	entrypoint: "./deployments/alchemy-worker/src/consumer.ts",
+	bindings: {
+		TASK_QUEUE: taskQueue,
+	},
+	eventSources: [taskQueue],
+});
+
+const wranglerJson = await WranglerJson({
+	worker: producer,
+});
+
+console.log(wranglerJson);

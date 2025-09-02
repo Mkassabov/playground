@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../../../deployments/alchemy-worker/src/patpat.ts"],
-  "sourceRoot": ".alchemy/out/patpat",
+  "sourceRoot": ".alchemy/out/alchemy-test-queue-bug-patpat-dev",
   "sourcesContent": ["export default {\n\t// biome-ignore lint/suspicious/useAwait: its fine\n\tasync fetch(): Promise<Response> {\n\t\tconsole.log(\"test\");\n\t\treturn new Response(\"Haiii - patpat!\");\n\t},\n};\n"],
   "mappings": ";AAAA,IAAO,iBAAQ;AAAA;AAAA,EAEd,MAAM,QAA2B;AAChC,YAAQ,IAAI,MAAM;AAClB,WAAO,IAAI,SAAS,iBAAiB;AAAA,EACtC;AACD;",
   "names": []

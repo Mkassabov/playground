@@ -2,7 +2,7 @@
   "kind": "cloudflare::Worker",
   "id": "consumer",
   "fqn": "alchemy-test-queue-bug/dev/consumer",
-  "seq": 2,
+  "seq": 3,
   "data": {},
   "status": "updated",
   "output": {
@@ -12,33 +12,8 @@
     "Symbol(alchemy::ResourceScope)": {
       "@scope": null
     },
-    "Symbol(alchemy::ResourceSeq)": 2,
+    "Symbol(alchemy::ResourceSeq)": 3,
     "entrypoint": "./deployments/alchemy-worker/src/consumer.ts",
-    "bindings": {
-      "TASK_QUEUE": {
-        "Symbol(alchemy::ResourceKind)": "cloudflare::Queue",
-        "Symbol(alchemy::ResourceID)": "task-queue",
-        "Symbol(alchemy::ResourceFQN)": "alchemy-test-queue-bug/dev/task-queue",
-        "Symbol(alchemy::ResourceScope)": {
-          "@scope": null
-        },
-        "Symbol(alchemy::ResourceSeq)": 0,
-        "type": "queue",
-        "id": "f86801583f01473e84ba14778b215a27",
-        "name": "alchemy-test-queue-bug-task-queue-dev",
-        "settings": {
-          "deliveryDelay": 0,
-          "messageRetentionPeriod": 345600
-        },
-        "createdOn": "2025-09-02T07:29:04.198844Z",
-        "modifiedOn": "2025-09-02T07:59:29.839303Z",
-        "accountId": "3a00d2d136f0e066b8e6761b6cff4895",
-        "dev": {
-          "id": "task-queue",
-          "remote": true
-        }
-      }
-    },
     "eventSources": [
       {
         "Symbol(alchemy::ResourceKind)": "cloudflare::Queue",
@@ -49,18 +24,18 @@
         },
         "Symbol(alchemy::ResourceSeq)": 0,
         "type": "queue",
-        "id": "f86801583f01473e84ba14778b215a27",
+        "id": "08414e775dbd4551a4e31bd3afafbae5",
         "name": "alchemy-test-queue-bug-task-queue-dev",
         "settings": {
           "deliveryDelay": 0,
           "messageRetentionPeriod": 345600
         },
-        "createdOn": "2025-09-02T07:29:04.198844Z",
-        "modifiedOn": "2025-09-02T07:59:29.839303Z",
+        "createdOn": "2025-09-02T19:19:23.321547Z",
+        "modifiedOn": "2025-09-02T19:19:23.321547Z",
         "accountId": "3a00d2d136f0e066b8e6761b6cff4895",
         "dev": {
           "id": "task-queue",
-          "remote": true
+          "remote": false
         }
       }
     ],
@@ -74,41 +49,17 @@
     "compatibilityDate": "2025-08-26",
     "compatibilityFlags": [],
     "format": "esm",
+    "bindings": {},
     "createdAt": {
-      "@date": "2025-09-02T07:46:42.620Z"
+      "@date": "2025-09-02T19:19:39.154Z"
     },
     "updatedAt": {
-      "@date": "2025-09-02T07:59:48.123Z"
+      "@date": "2025-09-02T19:22:46.109Z"
     },
     "url": "https://alchemy-test-queue-bug-consumer-dev.mkas.workers.dev"
   },
   "props": {
     "entrypoint": "./deployments/alchemy-worker/src/consumer.ts",
-    "bindings": {
-      "TASK_QUEUE": {
-        "Symbol(alchemy::ResourceKind)": "cloudflare::Queue",
-        "Symbol(alchemy::ResourceID)": "task-queue",
-        "Symbol(alchemy::ResourceFQN)": "alchemy-test-queue-bug/dev/task-queue",
-        "Symbol(alchemy::ResourceScope)": {
-          "@scope": null
-        },
-        "Symbol(alchemy::ResourceSeq)": 0,
-        "type": "queue",
-        "id": "f86801583f01473e84ba14778b215a27",
-        "name": "alchemy-test-queue-bug-task-queue-dev",
-        "settings": {
-          "deliveryDelay": 0,
-          "messageRetentionPeriod": 345600
-        },
-        "createdOn": "2025-09-02T07:29:04.198844Z",
-        "modifiedOn": "2025-09-02T07:59:29.839303Z",
-        "accountId": "3a00d2d136f0e066b8e6761b6cff4895",
-        "dev": {
-          "id": "task-queue",
-          "remote": true
-        }
-      }
-    },
     "eventSources": [
       {
         "Symbol(alchemy::ResourceKind)": "cloudflare::Queue",
@@ -119,23 +70,23 @@
         },
         "Symbol(alchemy::ResourceSeq)": 0,
         "type": "queue",
-        "id": "f86801583f01473e84ba14778b215a27",
+        "id": "08414e775dbd4551a4e31bd3afafbae5",
         "name": "alchemy-test-queue-bug-task-queue-dev",
         "settings": {
           "deliveryDelay": 0,
           "messageRetentionPeriod": 345600
         },
-        "createdOn": "2025-09-02T07:29:04.198844Z",
-        "modifiedOn": "2025-09-02T07:59:29.839303Z",
+        "createdOn": "2025-09-02T19:19:23.321547Z",
+        "modifiedOn": "2025-09-02T19:19:23.321547Z",
         "accountId": "3a00d2d136f0e066b8e6761b6cff4895",
         "dev": {
           "id": "task-queue",
-          "remote": true
+          "remote": false
         }
       }
     ],
     "dev": {
-      "remote": true
+      "remote": false
     }
   }
 }

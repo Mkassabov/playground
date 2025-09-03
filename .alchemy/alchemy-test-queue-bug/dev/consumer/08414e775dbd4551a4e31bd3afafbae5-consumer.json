@@ -1,20 +1,20 @@
 {
   "kind": "cloudflare::QueueConsumer",
-  "id": "f86801583f01473e84ba14778b215a27-consumer",
-  "fqn": "alchemy-test-queue-bug/dev/consumer/f86801583f01473e84ba14778b215a27-consumer",
+  "id": "08414e775dbd4551a4e31bd3afafbae5-consumer",
+  "fqn": "alchemy-test-queue-bug/dev/consumer/08414e775dbd4551a4e31bd3afafbae5-consumer",
   "seq": 0,
   "data": {},
-  "status": "updated",
+  "status": "created",
   "output": {
     "Symbol(alchemy::ResourceKind)": "cloudflare::QueueConsumer",
-    "Symbol(alchemy::ResourceID)": "f86801583f01473e84ba14778b215a27-consumer",
-    "Symbol(alchemy::ResourceFQN)": "alchemy-test-queue-bug/dev/consumer/f86801583f01473e84ba14778b215a27-consumer",
+    "Symbol(alchemy::ResourceID)": "08414e775dbd4551a4e31bd3afafbae5-consumer",
+    "Symbol(alchemy::ResourceFQN)": "alchemy-test-queue-bug/dev/consumer/08414e775dbd4551a4e31bd3afafbae5-consumer",
     "Symbol(alchemy::ResourceScope)": {
       "@scope": null
     },
     "Symbol(alchemy::ResourceSeq)": 0,
-    "id": "488922a3adef4d59a264509c68ba5dde",
-    "queueId": "f86801583f01473e84ba14778b215a27",
+    "id": "fefd930ee17143858c5e25e07fca9f3d",
+    "queueId": "08414e775dbd4551a4e31bd3afafbae5",
     "queue": {
       "Symbol(alchemy::ResourceKind)": "cloudflare::Queue",
       "Symbol(alchemy::ResourceID)": "task-queue",
@@ -24,18 +24,18 @@
       },
       "Symbol(alchemy::ResourceSeq)": 0,
       "type": "queue",
-      "id": "f86801583f01473e84ba14778b215a27",
+      "id": "08414e775dbd4551a4e31bd3afafbae5",
       "name": "alchemy-test-queue-bug-task-queue-dev",
       "settings": {
         "deliveryDelay": 0,
         "messageRetentionPeriod": 345600
       },
-      "createdOn": "2025-09-02T07:29:04.198844Z",
-      "modifiedOn": "2025-09-02T07:59:29.839303Z",
+      "createdOn": "2025-09-02T19:19:23.321547Z",
+      "modifiedOn": "2025-09-02T19:19:23.321547Z",
       "accountId": "3a00d2d136f0e066b8e6761b6cff4895",
       "dev": {
         "id": "task-queue",
-        "remote": true
+        "remote": false
       }
     },
     "type": "worker",
@@ -46,7 +46,7 @@
       "maxWaitTimeMs": 5000,
       "retryDelay": 0
     },
-    "createdOn": "2025-09-02T07:46:41.672407Z",
+    "createdOn": "2025-09-02T19:19:38.422104Z",
     "accountId": "3a00d2d136f0e066b8e6761b6cff4895"
   },
   "props": {
@@ -59,18 +59,18 @@
       },
       "Symbol(alchemy::ResourceSeq)": 0,
       "type": "queue",
-      "id": "f86801583f01473e84ba14778b215a27",
+      "id": "08414e775dbd4551a4e31bd3afafbae5",
       "name": "alchemy-test-queue-bug-task-queue-dev",
       "settings": {
         "deliveryDelay": 0,
         "messageRetentionPeriod": 345600
       },
-      "createdOn": "2025-09-02T07:29:04.198844Z",
-      "modifiedOn": "2025-09-02T07:59:29.839303Z",
+      "createdOn": "2025-09-02T19:19:23.321547Z",
+      "modifiedOn": "2025-09-02T19:19:23.321547Z",
       "accountId": "3a00d2d136f0e066b8e6761b6cff4895",
       "dev": {
         "id": "task-queue",
-        "remote": true
+        "remote": false
       }
     },
     "scriptName": "alchemy-test-queue-bug-consumer-dev",

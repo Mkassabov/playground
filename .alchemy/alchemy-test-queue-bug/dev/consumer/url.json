@@ -4,7 +4,7 @@
   "fqn": "alchemy-test-queue-bug/dev/consumer/url",
   "seq": 1,
   "data": {},
-  "status": "updated",
+  "status": "created",
   "output": {
     "Symbol(alchemy::ResourceKind)": "cloudflare::WorkerSubdomain",
     "Symbol(alchemy::ResourceID)": "url",

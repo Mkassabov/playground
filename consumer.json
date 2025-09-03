@@ -1,0 +1,13 @@
+{
+  "name": "alchemy-test-queue-bug-consumer-dev",
+  "main": "deployments\\alchemy-worker\\src\\consumer.ts",
+  "compatibility_date": "2025-08-26",
+  "compatibility_flags": [],
+  "queues": {
+    "consumers": [
+      {
+        "queue": "alchemy-test-queue-bug-task-queue-dev"
+      }
+    ]
+  }
+}

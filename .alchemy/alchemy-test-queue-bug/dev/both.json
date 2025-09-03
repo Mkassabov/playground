@@ -1,0 +1,141 @@
+{
+  "kind": "cloudflare::Worker",
+  "id": "both",
+  "fqn": "alchemy-test-queue-bug/dev/both",
+  "seq": 4,
+  "data": {},
+  "status": "updated",
+  "output": {
+    "Symbol(alchemy::ResourceKind)": "cloudflare::Worker",
+    "Symbol(alchemy::ResourceID)": "both",
+    "Symbol(alchemy::ResourceFQN)": "alchemy-test-queue-bug/dev/both",
+    "Symbol(alchemy::ResourceScope)": {
+      "@scope": null
+    },
+    "Symbol(alchemy::ResourceSeq)": 4,
+    "entrypoint": "./deployments/alchemy-worker/src/both.ts",
+    "bindings": {
+      "TASK_QUEUE": {
+        "Symbol(alchemy::ResourceKind)": "cloudflare::Queue",
+        "Symbol(alchemy::ResourceID)": "both-queue",
+        "Symbol(alchemy::ResourceFQN)": "alchemy-test-queue-bug/dev/both-queue",
+        "Symbol(alchemy::ResourceScope)": {
+          "@scope": null
+        },
+        "Symbol(alchemy::ResourceSeq)": 1,
+        "type": "queue",
+        "id": "a8ce6ad42b9444a495ba37199df242fc",
+        "name": "alchemy-test-queue-bug-both-queue-dev",
+        "settings": {
+          "deliveryDelay": 0,
+          "messageRetentionPeriod": 345600
+        },
+        "createdOn": "2025-09-02T19:19:25.141947Z",
+        "modifiedOn": "2025-09-02T19:19:25.141947Z",
+        "accountId": "3a00d2d136f0e066b8e6761b6cff4895",
+        "dev": {
+          "id": "both-queue",
+          "remote": false
+        }
+      }
+    },
+    "eventSources": [
+      {
+        "Symbol(alchemy::ResourceKind)": "cloudflare::Queue",
+        "Symbol(alchemy::ResourceID)": "both-queue",
+        "Symbol(alchemy::ResourceFQN)": "alchemy-test-queue-bug/dev/both-queue",
+        "Symbol(alchemy::ResourceScope)": {
+          "@scope": null
+        },
+        "Symbol(alchemy::ResourceSeq)": 1,
+        "type": "queue",
+        "id": "a8ce6ad42b9444a495ba37199df242fc",
+        "name": "alchemy-test-queue-bug-both-queue-dev",
+        "settings": {
+          "deliveryDelay": 0,
+          "messageRetentionPeriod": 345600
+        },
+        "createdOn": "2025-09-02T19:19:25.141947Z",
+        "modifiedOn": "2025-09-02T19:19:25.141947Z",
+        "accountId": "3a00d2d136f0e066b8e6761b6cff4895",
+        "dev": {
+          "id": "both-queue",
+          "remote": false
+        }
+      }
+    ],
+    "dev": {
+      "hasRemote": true
+    },
+    "type": "service",
+    "id": "both",
+    "name": "alchemy-test-queue-bug-both-dev",
+    "cwd": "",
+    "compatibilityDate": "2025-08-26",
+    "compatibilityFlags": [],
+    "format": "esm",
+    "createdAt": {
+      "@date": "2025-09-02T19:19:44.520Z"
+    },
+    "updatedAt": {
+      "@date": "2025-09-02T19:22:49.802Z"
+    },
+    "url": "https://alchemy-test-queue-bug-both-dev.mkas.workers.dev"
+  },
+  "props": {
+    "entrypoint": "./deployments/alchemy-worker/src/both.ts",
+    "bindings": {
+      "TASK_QUEUE": {
+        "Symbol(alchemy::ResourceKind)": "cloudflare::Queue",
+        "Symbol(alchemy::ResourceID)": "both-queue",
+        "Symbol(alchemy::ResourceFQN)": "alchemy-test-queue-bug/dev/both-queue",
+        "Symbol(alchemy::ResourceScope)": {
+          "@scope": null
+        },
+        "Symbol(alchemy::ResourceSeq)": 1,
+        "type": "queue",
+        "id": "a8ce6ad42b9444a495ba37199df242fc",
+        "name": "alchemy-test-queue-bug-both-queue-dev",
+        "settings": {
+          "deliveryDelay": 0,
+          "messageRetentionPeriod": 345600
+        },
+        "createdOn": "2025-09-02T19:19:25.141947Z",
+        "modifiedOn": "2025-09-02T19:19:25.141947Z",
+        "accountId": "3a00d2d136f0e066b8e6761b6cff4895",
+        "dev": {
+          "id": "both-queue",
+          "remote": false
+        }
+      }
+    },
+    "eventSources": [
+      {
+        "Symbol(alchemy::ResourceKind)": "cloudflare::Queue",
+        "Symbol(alchemy::ResourceID)": "both-queue",
+        "Symbol(alchemy::ResourceFQN)": "alchemy-test-queue-bug/dev/both-queue",
+        "Symbol(alchemy::ResourceScope)": {
+          "@scope": null
+        },
+        "Symbol(alchemy::ResourceSeq)": 1,
+        "type": "queue",
+        "id": "a8ce6ad42b9444a495ba37199df242fc",
+        "name": "alchemy-test-queue-bug-both-queue-dev",
+        "settings": {
+          "deliveryDelay": 0,
+          "messageRetentionPeriod": 345600
+        },
+        "createdOn": "2025-09-02T19:19:25.141947Z",
+        "modifiedOn": "2025-09-02T19:19:25.141947Z",
+        "accountId": "3a00d2d136f0e066b8e6761b6cff4895",
+        "dev": {
+          "id": "both-queue",
+          "remote": false
+        }
+      }
+    ],
+    "dev": {
+      "remote": false
+    }
+  }
+}

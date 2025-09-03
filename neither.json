@@ -1,0 +1,6 @@
+{
+  "name": "alchemy-test-queue-bug-neither-dev",
+  "main": "deployments\\alchemy-worker\\src\\neither.ts",
+  "compatibility_date": "2025-08-26",
+  "compatibility_flags": []
+}

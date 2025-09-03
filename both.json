@@ -1,0 +1,19 @@
+{
+  "name": "alchemy-test-queue-bug-both-dev",
+  "main": "deployments\\alchemy-worker\\src\\both.ts",
+  "compatibility_date": "2025-08-26",
+  "compatibility_flags": [],
+  "queues": {
+    "consumers": [
+      {
+        "queue": "alchemy-test-queue-bug-both-queue-dev"
+      }
+    ],
+    "producers": [
+      {
+        "binding": "TASK_QUEUE",
+        "queue": "a8ce6ad42b9444a495ba37199df242fc"
+      }
+    ]
+  }
+}

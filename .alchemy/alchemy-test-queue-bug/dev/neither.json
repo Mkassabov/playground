@@ -1,0 +1,42 @@
+{
+  "kind": "cloudflare::Worker",
+  "id": "neither",
+  "fqn": "alchemy-test-queue-bug/dev/neither",
+  "seq": 5,
+  "data": {},
+  "status": "updated",
+  "output": {
+    "Symbol(alchemy::ResourceKind)": "cloudflare::Worker",
+    "Symbol(alchemy::ResourceID)": "neither",
+    "Symbol(alchemy::ResourceFQN)": "alchemy-test-queue-bug/dev/neither",
+    "Symbol(alchemy::ResourceScope)": {
+      "@scope": null
+    },
+    "Symbol(alchemy::ResourceSeq)": 5,
+    "entrypoint": "./deployments/alchemy-worker/src/neither.ts",
+    "dev": {
+      "hasRemote": true
+    },
+    "type": "service",
+    "id": "neither",
+    "name": "alchemy-test-queue-bug-neither-dev",
+    "cwd": "",
+    "compatibilityDate": "2025-08-26",
+    "compatibilityFlags": [],
+    "format": "esm",
+    "bindings": {},
+    "createdAt": {
+      "@date": "2025-09-02T19:19:49.985Z"
+    },
+    "updatedAt": {
+      "@date": "2025-09-02T19:22:52.762Z"
+    },
+    "url": "https://alchemy-test-queue-bug-neither-dev.mkas.workers.dev"
+  },
+  "props": {
+    "entrypoint": "./deployments/alchemy-worker/src/neither.ts",
+    "dev": {
+      "remote": false
+    }
+  }
+}

@@ -1,22 +1,22 @@
 {
   "kind": "cloudflare::WorkerSubdomain",
   "id": "url",
-  "fqn": "alchemy-test-queue-bug/dev/patpat/url",
-  "seq": 0,
+  "fqn": "alchemy-test-queue-bug/dev/both/url",
+  "seq": 1,
   "data": {},
   "status": "created",
   "output": {
     "Symbol(alchemy::ResourceKind)": "cloudflare::WorkerSubdomain",
     "Symbol(alchemy::ResourceID)": "url",
-    "Symbol(alchemy::ResourceFQN)": "alchemy-test-queue-bug/dev/patpat/url",
+    "Symbol(alchemy::ResourceFQN)": "alchemy-test-queue-bug/dev/both/url",
     "Symbol(alchemy::ResourceScope)": {
       "@scope": null
     },
-    "Symbol(alchemy::ResourceSeq)": 0,
-    "url": "https://alchemy-test-queue-bug-patpat-dev.mkas.workers.dev"
+    "Symbol(alchemy::ResourceSeq)": 1,
+    "url": "https://alchemy-test-queue-bug-both-dev.mkas.workers.dev"
   },
   "props": {
-    "scriptName": "alchemy-test-queue-bug-patpat-dev",
+    "scriptName": "alchemy-test-queue-bug-both-dev",
     "retain": false,
     "dev": false
   }

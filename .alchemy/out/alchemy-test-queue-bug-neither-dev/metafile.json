@@ -1,0 +1,30 @@
+{
+  "inputs": {
+    "deployments/alchemy-worker/src/neither.ts": {
+      "bytes": 437,
+      "imports": [],
+      "format": "esm"
+    }
+  },
+  "outputs": {
+    ".alchemy/out/alchemy-test-queue-bug-neither-dev/neither.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 900
+    },
+    ".alchemy/out/alchemy-test-queue-bug-neither-dev/neither.js": {
+      "imports": [],
+      "exports": [
+        "default"
+      ],
+      "entryPoint": "deployments/alchemy-worker/src/neither.ts",
+      "inputs": {
+        "deployments/alchemy-worker/src/neither.ts": {
+          "bytesInOutput": 351
+        }
+      },
+      "bytes": 473
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "alchemy-test-queue-bug-producer-dev",
+  "main": "deployments\\alchemy-worker\\src\\producer.ts",
+  "compatibility_date": "2025-08-26",
+  "compatibility_flags": [],
+  "queues": {
+    "producers": [
+      {
+        "binding": "TASK_QUEUE",
+        "queue": "08414e775dbd4551a4e31bd3afafbae5"
+      }
+    ]
+  }
+}

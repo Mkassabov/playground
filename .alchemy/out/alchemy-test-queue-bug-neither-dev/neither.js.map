@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": ["../../../deployments/alchemy-worker/src/neither.ts"],
+  "sourceRoot": ".alchemy/out/alchemy-test-queue-bug-neither-dev",
+  "sourcesContent": ["import type { neither } from \"../../../alchemy.run\";\n\nexport default {\n\t// biome-ignore lint/suspicious/useAwait: its fine\n\tasync fetch(request: Request, _env: typeof neither.Env): Promise<Response> {\n\t\tconst url = new URL(request.url);\n\t\tconst message = url.searchParams.get(\"message\");\n\n\t\tconsole.log(\"[NEITHER] Received request with message:\", message);\n\t\treturn new Response(\"Error adding message to queue\", { status: 500 });\n\t},\n};\n"],
+  "mappings": ";AAEA,IAAO,kBAAQ;AAAA;AAAA,EAEd,MAAM,MAAM,SAAkB,MAA6C;AAC1E,UAAM,MAAM,IAAI,IAAI,QAAQ,GAAG;AAC/B,UAAM,UAAU,IAAI,aAAa,IAAI,SAAS;AAE9C,YAAQ,IAAI,4CAA4C,OAAO;AAC/D,WAAO,IAAI,SAAS,iCAAiC,EAAE,QAAQ,IAAI,CAAC;AAAA,EACrE;AACD;",
+  "names": []
+}

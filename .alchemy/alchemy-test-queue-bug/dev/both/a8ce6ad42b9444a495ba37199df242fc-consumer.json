@@ -1,0 +1,80 @@
+{
+  "kind": "cloudflare::QueueConsumer",
+  "id": "a8ce6ad42b9444a495ba37199df242fc-consumer",
+  "fqn": "alchemy-test-queue-bug/dev/both/a8ce6ad42b9444a495ba37199df242fc-consumer",
+  "seq": 0,
+  "data": {},
+  "status": "created",
+  "output": {
+    "Symbol(alchemy::ResourceKind)": "cloudflare::QueueConsumer",
+    "Symbol(alchemy::ResourceID)": "a8ce6ad42b9444a495ba37199df242fc-consumer",
+    "Symbol(alchemy::ResourceFQN)": "alchemy-test-queue-bug/dev/both/a8ce6ad42b9444a495ba37199df242fc-consumer",
+    "Symbol(alchemy::ResourceScope)": {
+      "@scope": null
+    },
+    "Symbol(alchemy::ResourceSeq)": 0,
+    "id": "63b707c0deed46ac916d71830db35bc1",
+    "queueId": "a8ce6ad42b9444a495ba37199df242fc",
+    "queue": {
+      "Symbol(alchemy::ResourceKind)": "cloudflare::Queue",
+      "Symbol(alchemy::ResourceID)": "both-queue",
+      "Symbol(alchemy::ResourceFQN)": "alchemy-test-queue-bug/dev/both-queue",
+      "Symbol(alchemy::ResourceScope)": {
+        "@scope": null
+      },
+      "Symbol(alchemy::ResourceSeq)": 1,
+      "type": "queue",
+      "id": "a8ce6ad42b9444a495ba37199df242fc",
+      "name": "alchemy-test-queue-bug-both-queue-dev",
+      "settings": {
+        "deliveryDelay": 0,
+        "messageRetentionPeriod": 345600
+      },
+      "createdOn": "2025-09-02T19:19:25.141947Z",
+      "modifiedOn": "2025-09-02T19:19:25.141947Z",
+      "accountId": "3a00d2d136f0e066b8e6761b6cff4895",
+      "dev": {
+        "id": "both-queue",
+        "remote": false
+      }
+    },
+    "type": "worker",
+    "scriptName": "alchemy-test-queue-bug-both-dev",
+    "settings": {
+      "batchSize": 10,
+      "maxRetries": 3,
+      "maxWaitTimeMs": 5000,
+      "retryDelay": 0
+    },
+    "createdOn": "2025-09-02T19:19:44.096933Z",
+    "accountId": "3a00d2d136f0e066b8e6761b6cff4895"
+  },
+  "props": {
+    "queue": {
+      "Symbol(alchemy::ResourceKind)": "cloudflare::Queue",
+      "Symbol(alchemy::ResourceID)": "both-queue",
+      "Symbol(alchemy::ResourceFQN)": "alchemy-test-queue-bug/dev/both-queue",
+      "Symbol(alchemy::ResourceScope)": {
+        "@scope": null
+      },
+      "Symbol(alchemy::ResourceSeq)": 1,
+      "type": "queue",
+      "id": "a8ce6ad42b9444a495ba37199df242fc",
+      "name": "alchemy-test-queue-bug-both-queue-dev",
+      "settings": {
+        "deliveryDelay": 0,
+        "messageRetentionPeriod": 345600
+      },
+      "createdOn": "2025-09-02T19:19:25.141947Z",
+      "modifiedOn": "2025-09-02T19:19:25.141947Z",
+      "accountId": "3a00d2d136f0e066b8e6761b6cff4895",
+      "dev": {
+        "id": "both-queue",
+        "remote": false
+      }
+    },
+    "scriptName": "alchemy-test-queue-bug-both-dev",
+    "adopt": false,
+    "dev": false
+  }
+}

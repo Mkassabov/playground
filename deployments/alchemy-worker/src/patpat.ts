@@ -1,7 +1,11 @@
+import { id as nanoid } from "../../../utils/nanoid";
+
 export default {
 	// biome-ignore lint/suspicious/useAwait: its fine
 	async fetch(): Promise<Response> {
-		console.log("test");
-		return new Response("Haiii - patpat!");
+		const id = nanoid();
+		const message = `Haiii - patpat! ${id}`;
+		console.log(message);
+		return new Response(message);
 	},
 };

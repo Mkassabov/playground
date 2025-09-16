@@ -1,0 +1,50 @@
+{
+  "inputs": {
+    "utils/nanoid.ts": {
+      "bytes": 1498,
+      "imports": [
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "deployments/alchemy-worker/src/patpat.ts": {
+      "bytes": 289,
+      "imports": [
+        {
+          "path": "utils/nanoid.ts",
+          "kind": "import-statement",
+          "original": "../../../utils/nanoid"
+        }
+      ],
+      "format": "esm"
+    }
+  },
+  "outputs": {
+    ".alchemy/out/alchemy-test-patpat-michael/patpat.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 3157
+    },
+    ".alchemy/out/alchemy-test-patpat-michael/patpat.js": {
+      "imports": [],
+      "exports": [
+        "default"
+      ],
+      "entryPoint": "deployments/alchemy-worker/src/patpat.ts",
+      "inputs": {
+        "utils/nanoid.ts": {
+          "bytesInOutput": 1232
+        },
+        "deployments/alchemy-worker/src/patpat.ts": {
+          "bytesInOutput": 229
+        }
+      },
+      "bytes": 1730
+    }
+  }
+}

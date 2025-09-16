@@ -1,14 +1,14 @@
 {
   "kind": "cloudflare::WorkerSubdomain",
   "id": "url",
-  "fqn": "alchemy-test/dev/patpat/url",
+  "fqn": "alchemy-test/michael/patpat/url",
   "seq": 0,
   "data": {},
   "status": "created",
   "output": {
     "Symbol(alchemy::ResourceKind)": "cloudflare::WorkerSubdomain",
     "Symbol(alchemy::ResourceID)": "url",
-    "Symbol(alchemy::ResourceFQN)": "alchemy-test/dev/patpat/url",
+    "Symbol(alchemy::ResourceFQN)": "alchemy-test/michael/patpat/url",
     "Symbol(alchemy::ResourceScope)": {
       "@scope": null
     },
@@ -16,7 +16,7 @@
     "url": "https://unavailable.alchemy.run"
   },
   "props": {
-    "scriptName": "patpat",
+    "scriptName": "alchemy-test-patpat-michael",
     "retain": false,
     "dev": true
   }

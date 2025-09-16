@@ -21,12 +21,18 @@ export const patpat = await Worker("patpat", {
 	entrypoint: "./deployments/alchemy-worker/src/patpat.ts",
 	url: true,
 	bindings: {
-		TAPTAP: Worker.entrypoint<TapTapEntrypoint>(taptap, "TapTapEntrypoint"),
-		TAPTAPREF: Worker.entrypoint<TapTapEntrypoint>(
+		TAPTAP: Worker.experimentalEntrypoint<TapTapEntrypoint>(
+			taptap,
+			"TapTapEntrypoint",
+		),
+		TAPTAPREF: Worker.experimentalEntrypoint<TapTapEntrypoint>(
 			taptapRef,
 			"TapTapEntrypoint",
 		),
-		SELF: Worker.entrypoint<PatPatEntrypoint>(Self, "PatPatEntrypoint"),
+		SELF: Worker.experimentalEntrypoint<PatPatEntrypoint>(
+			Self,
+			"PatPatEntrypoint",
+		),
 		RAWTAPTAP: taptap,
 		RAWTAPTAPREF: taptapRef,
 		RAWSELF: Self,

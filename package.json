@@ -14,7 +14,7 @@
 		"deployments/*"
 	],
 	"dependencies": {
-		"alchemy": "link:alchemy",
+		"alchemy": "https://pkg.pr.new/sam-goodwin/alchemy@969",
 		"wrangler": "^4.37.1"
 	}
 }

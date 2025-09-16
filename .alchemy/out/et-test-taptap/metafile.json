@@ -1,0 +1,67 @@
+{
+  "inputs": {
+    "utils/nanoid.ts": {
+      "bytes": 1498,
+      "imports": [
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "deployments/alchemy-worker/src/taptap.ts": {
+      "bytes": 543,
+      "imports": [
+        {
+          "path": "utils/nanoid.ts",
+          "kind": "import-statement",
+          "original": "../../../utils/nanoid"
+        },
+        {
+          "path": "cloudflare:workers",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    }
+  },
+  "outputs": {
+    ".alchemy/out/et-test-taptap/taptap.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 3560
+    },
+    ".alchemy/out/et-test-taptap/taptap.js": {
+      "imports": [
+        {
+          "path": "cloudflare:workers",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "exports": [
+        "TapTapEntrypoint",
+        "default"
+      ],
+      "entryPoint": "deployments/alchemy-worker/src/taptap.ts",
+      "inputs": {
+        "utils/nanoid.ts": {
+          "bytesInOutput": 1232
+        },
+        "deployments/alchemy-worker/src/taptap.ts": {
+          "bytesInOutput": 541
+        }
+      },
+      "bytes": 2062
+    }
+  }
+}

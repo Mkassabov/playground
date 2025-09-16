@@ -1,0 +1,119 @@
+{
+  "kind": "cloudflare::Worker",
+  "id": "patpat",
+  "fqn": "entrypoint-test/michael/patpat",
+  "seq": 1,
+  "data": {},
+  "status": "updated",
+  "output": {
+    "Symbol(alchemy::ResourceKind)": "cloudflare::Worker",
+    "Symbol(alchemy::ResourceID)": "patpat",
+    "Symbol(alchemy::ResourceFQN)": "entrypoint-test/michael/patpat",
+    "Symbol(alchemy::ResourceScope)": {
+      "@scope": null
+    },
+    "Symbol(alchemy::ResourceSeq)": 1,
+    "entrypoint": "./deployments/alchemy-worker/src/patpat.ts",
+    "url": "http://localhost:1338",
+    "bindings": {
+      "TAPTAP": {
+        "Symbol(alchemy::ResourceKind)": "cloudflare::Worker",
+        "Symbol(alchemy::ResourceID)": "taptap",
+        "Symbol(alchemy::ResourceFQN)": "entrypoint-test/michael/taptap",
+        "Symbol(alchemy::ResourceScope)": {
+          "@scope": null
+        },
+        "Symbol(alchemy::ResourceSeq)": 0,
+        "name": "et-test-taptap",
+        "entrypoint": "./deployments/alchemy-worker/src/taptap.ts",
+        "url": "http://localhost:1337",
+        "type": "service",
+        "id": "taptap",
+        "cwd": "",
+        "compatibilityDate": "2025-09-13",
+        "compatibilityFlags": [],
+        "format": "esm",
+        "bindings": {},
+        "createdAt": {
+          "@date": "2025-09-16T12:55:05.010Z"
+        },
+        "updatedAt": 1758032272164,
+        "routes": [],
+        "domains": [],
+        "dev": {
+          "hasRemote": true
+        },
+        "__entrypoint__": "TapTapEntrypoint"
+      },
+      "TAPTAPREF": {
+        "service": "et-test-taptap",
+        "type": "service",
+        "__entrypoint__": "TapTapEntrypoint"
+      },
+      "SELF": {
+        "type": "_alchemy_self",
+        "__entrypoint__": "PatPatEntrypoint"
+      }
+    },
+    "type": "service",
+    "id": "patpat",
+    "name": "entrypoint-test-patpat-michael",
+    "cwd": "",
+    "compatibilityDate": "2025-09-13",
+    "compatibilityFlags": [],
+    "format": "esm",
+    "createdAt": {
+      "@date": "2025-09-16T13:08:55.672Z"
+    },
+    "updatedAt": 1758032272312,
+    "routes": [],
+    "domains": [],
+    "dev": {
+      "hasRemote": true
+    }
+  },
+  "props": {
+    "entrypoint": "./deployments/alchemy-worker/src/patpat.ts",
+    "url": true,
+    "bindings": {
+      "TAPTAP": {
+        "Symbol(alchemy::ResourceKind)": "cloudflare::Worker",
+        "Symbol(alchemy::ResourceID)": "taptap",
+        "Symbol(alchemy::ResourceFQN)": "entrypoint-test/michael/taptap",
+        "Symbol(alchemy::ResourceScope)": {
+          "@scope": null
+        },
+        "Symbol(alchemy::ResourceSeq)": 0,
+        "name": "et-test-taptap",
+        "entrypoint": "./deployments/alchemy-worker/src/taptap.ts",
+        "url": "http://localhost:1337",
+        "type": "service",
+        "id": "taptap",
+        "cwd": "",
+        "compatibilityDate": "2025-09-13",
+        "compatibilityFlags": [],
+        "format": "esm",
+        "bindings": {},
+        "createdAt": {
+          "@date": "2025-09-16T12:55:05.010Z"
+        },
+        "updatedAt": 1758032272164,
+        "routes": [],
+        "domains": [],
+        "dev": {
+          "hasRemote": true
+        },
+        "__entrypoint__": "TapTapEntrypoint"
+      },
+      "TAPTAPREF": {
+        "service": "et-test-taptap",
+        "type": "service",
+        "__entrypoint__": "TapTapEntrypoint"
+      },
+      "SELF": {
+        "type": "_alchemy_self",
+        "__entrypoint__": "PatPatEntrypoint"
+      }
+    }
+  }
+}

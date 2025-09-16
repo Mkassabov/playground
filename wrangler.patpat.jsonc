@@ -1,0 +1,23 @@
+{
+	"name": "entrypoint-test-patpat-michael",
+	"main": "deployments\\alchemy-worker\\src\\patpat.ts",
+	"compatibility_date": "2025-09-13",
+	"compatibility_flags": [],
+	"services": [
+		{
+			"binding": "TAPTAP",
+			"service": "et-test-taptap",
+			"entrypoint": "TapTapEntrypoint"
+		},
+		{
+			"binding": "TAPTAPREF",
+			"service": "et-test-taptap",
+			"entrypoint": "TapTapEntrypoint"
+		},
+		{
+			"binding": "SELF",
+			"service": "entrypoint-test-patpat-michael",
+			"entrypoint": "PatPatEntrypoint"
+		}
+	]
+}

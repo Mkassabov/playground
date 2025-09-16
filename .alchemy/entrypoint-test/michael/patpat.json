@@ -37,7 +37,7 @@
         "createdAt": {
           "@date": "2025-09-16T12:55:05.010Z"
         },
-        "updatedAt": 1758032272164,
+        "updatedAt": 1758032972771,
         "routes": [],
         "domains": [],
         "dev": {
@@ -53,6 +53,41 @@
       "SELF": {
         "type": "_alchemy_self",
         "__entrypoint__": "PatPatEntrypoint"
+      },
+      "RAWTAPTAP": {
+        "Symbol(alchemy::ResourceKind)": "cloudflare::Worker",
+        "Symbol(alchemy::ResourceID)": "taptap",
+        "Symbol(alchemy::ResourceFQN)": "entrypoint-test/michael/taptap",
+        "Symbol(alchemy::ResourceScope)": {
+          "@scope": null
+        },
+        "Symbol(alchemy::ResourceSeq)": 0,
+        "name": "et-test-taptap",
+        "entrypoint": "./deployments/alchemy-worker/src/taptap.ts",
+        "url": "http://localhost:1337",
+        "type": "service",
+        "id": "taptap",
+        "cwd": "",
+        "compatibilityDate": "2025-09-13",
+        "compatibilityFlags": [],
+        "format": "esm",
+        "bindings": {},
+        "createdAt": {
+          "@date": "2025-09-16T12:55:05.010Z"
+        },
+        "updatedAt": 1758032972771,
+        "routes": [],
+        "domains": [],
+        "dev": {
+          "hasRemote": true
+        }
+      },
+      "RAWTAPTAPREF": {
+        "service": "et-test-taptap",
+        "type": "service"
+      },
+      "RAWSELF": {
+        "type": "_alchemy_self"
       }
     },
     "type": "service",
@@ -65,7 +100,7 @@
     "createdAt": {
       "@date": "2025-09-16T13:08:55.672Z"
     },
-    "updatedAt": 1758032272312,
+    "updatedAt": 1758032972949,
     "routes": [],
     "domains": [],
     "dev": {
@@ -97,7 +132,7 @@
         "createdAt": {
           "@date": "2025-09-16T12:55:05.010Z"
         },
-        "updatedAt": 1758032272164,
+        "updatedAt": 1758032972771,
         "routes": [],
         "domains": [],
         "dev": {
@@ -113,6 +148,41 @@
       "SELF": {
         "type": "_alchemy_self",
         "__entrypoint__": "PatPatEntrypoint"
+      },
+      "RAWTAPTAP": {
+        "Symbol(alchemy::ResourceKind)": "cloudflare::Worker",
+        "Symbol(alchemy::ResourceID)": "taptap",
+        "Symbol(alchemy::ResourceFQN)": "entrypoint-test/michael/taptap",
+        "Symbol(alchemy::ResourceScope)": {
+          "@scope": null
+        },
+        "Symbol(alchemy::ResourceSeq)": 0,
+        "name": "et-test-taptap",
+        "entrypoint": "./deployments/alchemy-worker/src/taptap.ts",
+        "url": "http://localhost:1337",
+        "type": "service",
+        "id": "taptap",
+        "cwd": "",
+        "compatibilityDate": "2025-09-13",
+        "compatibilityFlags": [],
+        "format": "esm",
+        "bindings": {},
+        "createdAt": {
+          "@date": "2025-09-16T12:55:05.010Z"
+        },
+        "updatedAt": 1758032972771,
+        "routes": [],
+        "domains": [],
+        "dev": {
+          "hasRemote": true
+        }
+      },
+      "RAWTAPTAPREF": {
+        "service": "et-test-taptap",
+        "type": "service"
+      },
+      "RAWSELF": {
+        "type": "_alchemy_self"
       }
     }
   }

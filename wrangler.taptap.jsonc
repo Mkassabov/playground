@@ -1,0 +1,6 @@
+{
+  "name": "et-test-taptap",
+  "main": "deployments\\alchemy-worker\\src\\taptap.ts",
+  "compatibility_date": "2025-09-13",
+  "compatibility_flags": []
+}

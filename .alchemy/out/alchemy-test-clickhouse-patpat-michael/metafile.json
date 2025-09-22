@@ -1,0 +1,643 @@
+{
+  "inputs": {
+    "utils/nanoid.ts": {
+      "bytes": 1498,
+      "imports": [
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/@clickhouse/client-common/dist/logger.js": {
+      "bytes": 4270,
+      "imports": [
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-common/dist/config.js": {
+      "bytes": 12755,
+      "imports": [
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/logger.js",
+          "kind": "require-call",
+          "original": "./logger"
+        },
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-common/dist/client.js": {
+      "bytes": 9465,
+      "imports": [
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/index.js",
+          "kind": "require-call",
+          "original": "@clickhouse/client-common"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/config.js",
+          "kind": "require-call",
+          "original": "./config"
+        },
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-common/dist/data_formatter/formatter.js": {
+      "bytes": 2799,
+      "imports": [
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-common/dist/data_formatter/format_query_params.js": {
+      "bytes": 3741,
+      "imports": [
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-common/dist/settings.js": {
+      "bytes": 616,
+      "imports": [
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-common/dist/data_formatter/format_query_settings.js": {
+      "bytes": 796,
+      "imports": [
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/settings.js",
+          "kind": "require-call",
+          "original": "../settings"
+        },
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-common/dist/data_formatter/index.js": {
+      "bytes": 1479,
+      "imports": [
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/data_formatter/formatter.js",
+          "kind": "require-call",
+          "original": "./formatter"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/data_formatter/format_query_params.js",
+          "kind": "require-call",
+          "original": "./format_query_params"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/data_formatter/format_query_settings.js",
+          "kind": "require-call",
+          "original": "./format_query_settings"
+        },
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-common/dist/error/error.js": {
+      "bytes": 2874,
+      "imports": [
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-common/dist/error/index.js": {
+      "bytes": 833,
+      "imports": [
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/error/error.js",
+          "kind": "require-call",
+          "original": "./error"
+        },
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-common/dist/clickhouse_types.js": {
+      "bytes": 1254,
+      "imports": [
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-common/dist/parse/column_types.js": {
+      "bytes": 18417,
+      "imports": [
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-common/dist/parse/index.js": {
+      "bytes": 840,
+      "imports": [
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/parse/column_types.js",
+          "kind": "require-call",
+          "original": "./column_types"
+        },
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-common/dist/utils/connection.js": {
+      "bytes": 1275,
+      "imports": [
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-common/dist/utils/sleep.js": {
+      "bytes": 254,
+      "imports": [
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-common/dist/utils/url.js": {
+      "bytes": 2244,
+      "imports": [
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/data_formatter/index.js",
+          "kind": "require-call",
+          "original": "../data_formatter"
+        },
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-common/dist/utils/index.js": {
+      "bytes": 922,
+      "imports": [
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/utils/connection.js",
+          "kind": "require-call",
+          "original": "./connection"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/utils/sleep.js",
+          "kind": "require-call",
+          "original": "./sleep"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/utils/url.js",
+          "kind": "require-call",
+          "original": "./url"
+        },
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-common/dist/index.js": {
+      "bytes": 6080,
+      "imports": [
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/client.js",
+          "kind": "require-call",
+          "original": "./client"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/data_formatter/index.js",
+          "kind": "require-call",
+          "original": "./data_formatter"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/error/index.js",
+          "kind": "require-call",
+          "original": "./error"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/logger.js",
+          "kind": "require-call",
+          "original": "./logger"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/clickhouse_types.js",
+          "kind": "require-call",
+          "original": "./clickhouse_types"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/settings.js",
+          "kind": "require-call",
+          "original": "./settings"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/parse/index.js",
+          "kind": "require-call",
+          "original": "./parse"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/data_formatter/index.js",
+          "kind": "require-call",
+          "original": "./data_formatter"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/config.js",
+          "kind": "require-call",
+          "original": "./config"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/utils/index.js",
+          "kind": "require-call",
+          "original": "./utils"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/logger.js",
+          "kind": "require-call",
+          "original": "./logger"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/error/index.js",
+          "kind": "require-call",
+          "original": "./error"
+        },
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-web/dist/utils/stream.js": {
+      "bytes": 1107,
+      "imports": [
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-web/dist/utils/encoder.js": {
+      "bytes": 1292,
+      "imports": [
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/index.js",
+          "kind": "require-call",
+          "original": "@clickhouse/client-common"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-web/dist/utils/stream.js",
+          "kind": "require-call",
+          "original": "./stream"
+        },
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-web/dist/utils/index.js": {
+      "bytes": 879,
+      "imports": [
+        {
+          "path": "node_modules/@clickhouse/client-web/dist/utils/stream.js",
+          "kind": "require-call",
+          "original": "./stream"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-web/dist/utils/encoder.js",
+          "kind": "require-call",
+          "original": "./encoder"
+        },
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-web/dist/connection/web_connection.js": {
+      "bytes": 8359,
+      "imports": [
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/index.js",
+          "kind": "require-call",
+          "original": "@clickhouse/client-common"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-web/dist/utils/index.js",
+          "kind": "require-call",
+          "original": "../utils"
+        },
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-web/dist/connection/index.js": {
+      "bytes": 842,
+      "imports": [
+        {
+          "path": "node_modules/@clickhouse/client-web/dist/connection/web_connection.js",
+          "kind": "require-call",
+          "original": "./web_connection"
+        },
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-web/dist/result_set.js": {
+      "bytes": 6112,
+      "imports": [
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/index.js",
+          "kind": "require-call",
+          "original": "@clickhouse/client-common"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-web/dist/utils/index.js",
+          "kind": "require-call",
+          "original": "./utils"
+        },
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-web/dist/config.js": {
+      "bytes": 625,
+      "imports": [
+        {
+          "path": "node_modules/@clickhouse/client-web/dist/connection/index.js",
+          "kind": "require-call",
+          "original": "./connection"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-web/dist/result_set.js",
+          "kind": "require-call",
+          "original": "./result_set"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-web/dist/utils/index.js",
+          "kind": "require-call",
+          "original": "./utils"
+        },
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-web/dist/client.js": {
+      "bytes": 574,
+      "imports": [
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/index.js",
+          "kind": "require-call",
+          "original": "@clickhouse/client-common"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-web/dist/config.js",
+          "kind": "require-call",
+          "original": "./config"
+        },
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@clickhouse/client-web/dist/index.js": {
+      "bytes": 2127,
+      "imports": [
+        {
+          "path": "node_modules/@clickhouse/client-web/dist/client.js",
+          "kind": "require-call",
+          "original": "./client"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-web/dist/result_set.js",
+          "kind": "require-call",
+          "original": "./result_set"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-common/dist/index.js",
+          "kind": "require-call",
+          "original": "@clickhouse/client-common"
+        },
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "deployments/alchemy-worker/src/patpat.ts": {
+      "bytes": 1200,
+      "imports": [
+        {
+          "path": "utils/nanoid.ts",
+          "kind": "import-statement",
+          "original": "../../../utils/nanoid"
+        },
+        {
+          "path": "node_modules/@clickhouse/client-web/dist/index.js",
+          "kind": "import-statement",
+          "original": "@clickhouse/client-web"
+        }
+      ],
+      "format": "esm"
+    }
+  },
+  "outputs": {
+    ".alchemy/out/alchemy-test-clickhouse-patpat-michael/patpat.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 44827
+    },
+    ".alchemy/out/alchemy-test-clickhouse-patpat-michael/patpat.js": {
+      "imports": [],
+      "exports": [
+        "default"
+      ],
+      "entryPoint": "deployments/alchemy-worker/src/patpat.ts",
+      "inputs": {
+        "node_modules/@clickhouse/client-common/dist/logger.js": {
+          "bytesInOutput": 4653
+        },
+        "node_modules/@clickhouse/client-common/dist/config.js": {
+          "bytesInOutput": 11189
+        },
+        "node_modules/@clickhouse/client-common/dist/client.js": {
+          "bytesInOutput": 9746
+        },
+        "node_modules/@clickhouse/client-common/dist/data_formatter/formatter.js": {
+          "bytesInOutput": 3094
+        },
+        "node_modules/@clickhouse/client-common/dist/data_formatter/format_query_params.js": {
+          "bytesInOutput": 3679
+        },
+        "node_modules/@clickhouse/client-common/dist/settings.js": {
+          "bytesInOutput": 764
+        },
+        "node_modules/@clickhouse/client-common/dist/data_formatter/format_query_settings.js": {
+          "bytesInOutput": 808
+        },
+        "node_modules/@clickhouse/client-common/dist/data_formatter/index.js": {
+          "bytesInOutput": 1818
+        },
+        "node_modules/@clickhouse/client-common/dist/error/error.js": {
+          "bytesInOutput": 2287
+        },
+        "node_modules/@clickhouse/client-common/dist/error/index.js": {
+          "bytesInOutput": 1017
+        },
+        "node_modules/@clickhouse/client-common/dist/clickhouse_types.js": {
+          "bytesInOutput": 867
+        },
+        "node_modules/@clickhouse/client-common/dist/parse/column_types.js": {
+          "bytesInOutput": 16055
+        },
+        "node_modules/@clickhouse/client-common/dist/parse/index.js": {
+          "bytesInOutput": 1023
+        },
+        "node_modules/@clickhouse/client-common/dist/utils/connection.js": {
+          "bytesInOutput": 1632
+        },
+        "node_modules/@clickhouse/client-common/dist/utils/sleep.js": {
+          "bytesInOutput": 388
+        },
+        "node_modules/@clickhouse/client-common/dist/utils/url.js": {
+          "bytesInOutput": 2049
+        },
+        "node_modules/@clickhouse/client-common/dist/utils/index.js": {
+          "bytesInOutput": 1107
+        },
+        "node_modules/@clickhouse/client-common/dist/index.js": {
+          "bytesInOutput": 7561
+        },
+        "node_modules/@clickhouse/client-web/dist/utils/stream.js": {
+          "bytesInOutput": 1188
+        },
+        "node_modules/@clickhouse/client-web/dist/utils/encoder.js": {
+          "bytesInOutput": 1412
+        },
+        "node_modules/@clickhouse/client-web/dist/utils/index.js": {
+          "bytesInOutput": 1061
+        },
+        "node_modules/@clickhouse/client-web/dist/connection/web_connection.js": {
+          "bytesInOutput": 7921
+        },
+        "node_modules/@clickhouse/client-web/dist/connection/index.js": {
+          "bytesInOutput": 1033
+        },
+        "node_modules/@clickhouse/client-web/dist/result_set.js": {
+          "bytesInOutput": 5044
+        },
+        "node_modules/@clickhouse/client-web/dist/config.js": {
+          "bytesInOutput": 811
+        },
+        "node_modules/@clickhouse/client-web/dist/client.js": {
+          "bytesInOutput": 788
+        },
+        "node_modules/@clickhouse/client-web/dist/index.js": {
+          "bytesInOutput": 2676
+        },
+        "utils/nanoid.ts": {
+          "bytesInOutput": 1232
+        },
+        "deployments/alchemy-worker/src/patpat.ts": {
+          "bytesInOutput": 1099
+        }
+      },
+      "bytes": 97292
+    }
+  }
+}

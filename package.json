@@ -14,6 +14,7 @@
 		"deployments/*"
 	],
 	"dependencies": {
+		"@clickhouse/client-web": "^1.12.1",
 		"alchemy": "link:alchemy"
 	}
 }

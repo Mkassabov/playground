@@ -1,0 +1,74 @@
+{
+  "kind": "clickhouse::Service",
+  "id": "clickhouse",
+  "fqn": "alchemy-test-clickhouse/michael/clickhouse",
+  "seq": 0,
+  "data": {},
+  "status": "created",
+  "output": {
+    "Symbol(alchemy::ResourceKind)": "clickhouse::Service",
+    "Symbol(alchemy::ResourceID)": "clickhouse",
+    "Symbol(alchemy::ResourceFQN)": "alchemy-test-clickhouse/michael/clickhouse",
+    "Symbol(alchemy::ResourceScope)": {
+      "@scope": null
+    },
+    "Symbol(alchemy::ResourceSeq)": 0,
+    "organizationId": "bfd6a955-0745-4668-ae53-0e12887a74fd",
+    "name": "alchemy-test-clickhouse-clickhouse-michael",
+    "clickhouseId": "07514591-38da-4477-82d1-0243ab7e77d2",
+    "password": {
+      "@secret": "5WmnTBLo/vKq5cf8V4flwS2iSDnZr2ZglziR2bH2lv8E0oCIv944zO98hlSpOBtNk9l/ho8="
+    },
+    "provider": "aws",
+    "region": "us-east-1",
+    "ipAccessList": [
+      {
+        "source": "0.0.0.0/0",
+        "description": "Anywhere"
+      }
+    ],
+    "minReplicaMemoryGb": 8,
+    "maxReplicaMemoryGb": 356,
+    "numReplicas": 3,
+    "idleScaling": true,
+    "idleTimeoutMinutes": 15,
+    "isReadonly": false,
+    "dataWarehouseId": "085af612-5b16-4be9-b019-966652685279",
+    "releaseChannel": "default",
+    "hasTransparentDataEncryption": false,
+    "endpoints": [
+      {
+        "protocol": "nativesecure",
+        "host": "bxbjyogpoo.us-east-1.aws.clickhouse.cloud",
+        "port": 9440
+      },
+      {
+        "protocol": "https",
+        "host": "bxbjyogpoo.us-east-1.aws.clickhouse.cloud",
+        "port": 8443
+      },
+      {
+        "protocol": "mysql",
+        "host": "bxbjyogpoo.us-east-1.aws.clickhouse.cloud",
+        "port": 3306,
+        "username": "mysql4bxbjyogpoo"
+      }
+    ],
+    "profile": "v1-default",
+    "stateTarget": "start",
+    "state": "provisioning"
+  },
+  "props": {
+    "organization": {
+      "id": "bfd6a955-0745-4668-ae53-0e12887a74fd",
+      "name": "MK's Organization",
+      "createdAt": "2025-09-19T03:15:59Z",
+      "privateEndpoints": []
+    },
+    "provider": "aws",
+    "region": "us-east-1",
+    "minReplicaMemoryGb": 8,
+    "maxReplicaMemoryGb": 356,
+    "numReplicas": 3
+  }
+}

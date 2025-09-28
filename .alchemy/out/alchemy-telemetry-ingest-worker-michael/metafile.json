@@ -1,16 +1,5 @@
 {
   "inputs": {
-    "utils/nanoid.ts": {
-      "bytes": 1498,
-      "imports": [
-        {
-          "path": "<runtime>",
-          "kind": "import-statement",
-          "external": true
-        }
-      ],
-      "format": "esm"
-    },
     "node_modules/@clickhouse/client-common/dist/logger.js": {
       "bytes": 4270,
       "imports": [
@@ -518,14 +507,9 @@
       ],
       "format": "cjs"
     },
-    "deployments/alchemy-worker/src/patpat.ts": {
-      "bytes": 1200,
+    "deployments/telemetry.ts": {
+      "bytes": 598,
       "imports": [
-        {
-          "path": "utils/nanoid.ts",
-          "kind": "import-statement",
-          "original": "../../../utils/nanoid"
-        },
         {
           "path": "node_modules/@clickhouse/client-web/dist/index.js",
           "kind": "import-statement",
@@ -536,18 +520,18 @@
     }
   },
   "outputs": {
-    ".alchemy/out/alchemy-test-clickhouse-patpat-michael/patpat.js.map": {
+    ".alchemy/out/alchemy-telemetry-ingest-worker-michael/telemetry.js.map": {
       "imports": [],
       "exports": [],
       "inputs": {},
-      "bytes": 44827
+      "bytes": 41269
     },
-    ".alchemy/out/alchemy-test-clickhouse-patpat-michael/patpat.js": {
+    ".alchemy/out/alchemy-telemetry-ingest-worker-michael/telemetry.js": {
       "imports": [],
       "exports": [
         "default"
       ],
-      "entryPoint": "deployments/alchemy-worker/src/patpat.ts",
+      "entryPoint": "deployments/telemetry.ts",
       "inputs": {
         "node_modules/@clickhouse/client-common/dist/logger.js": {
           "bytesInOutput": 4653
@@ -630,14 +614,11 @@
         "node_modules/@clickhouse/client-web/dist/index.js": {
           "bytesInOutput": 2676
         },
-        "utils/nanoid.ts": {
-          "bytesInOutput": 1232
-        },
-        "deployments/alchemy-worker/src/patpat.ts": {
-          "bytesInOutput": 1099
+        "deployments/telemetry.ts": {
+          "bytesInOutput": 542
         }
       },
-      "bytes": 97292
+      "bytes": 95473
     }
   }
 }

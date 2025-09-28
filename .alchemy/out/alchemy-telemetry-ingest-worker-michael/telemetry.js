@@ -2467,82 +2467,27 @@ var require_dist2 = __commonJS({
   }
 });
 
-// utils/nanoid.ts
-var POOL_SIZE_MULTIPLIER = 128;
-var pool;
-var poolOffset;
-function fillPool(bytes) {
-  if (!pool || pool.length < bytes) {
-    pool = new Uint8Array(bytes * POOL_SIZE_MULTIPLIER);
-    crypto.getRandomValues(pool);
-    poolOffset = 0;
-  } else if (poolOffset + bytes > pool.length) {
-    crypto.getRandomValues(pool);
-    poolOffset = 0;
-  }
-  poolOffset += bytes;
-}
-__name(fillPool, "fillPool");
-function idGenerator(alphabet, defaultSize) {
-  const mask = (2 << 31 - Math.clz32(alphabet.length - 1 | 1)) - 1;
-  const step = Math.ceil(1.6 * mask * defaultSize / alphabet.length);
-  return (size = defaultSize) => {
-    let id2 = "";
-    while (true) {
-      fillPool(step);
-      const bytes = pool.subarray(poolOffset - step, poolOffset);
-      for (let i = 0; i < step; i++) {
-        id2 += alphabet[bytes[i] & mask] || "";
-        if (id2.length === size) {
-          return id2;
-        }
-      }
-    }
-  };
-}
-__name(idGenerator, "idGenerator");
-var DEFAULT_ALPHABET = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-var DEFAULT_LENGTH = 10;
-var id = idGenerator(DEFAULT_ALPHABET, DEFAULT_LENGTH);
-var HEX_ALPHABET = "0123456789abcdef";
-var HEX_LENGTH = 16;
-var hexId = idGenerator(HEX_ALPHABET, HEX_LENGTH);
-
-// deployments/alchemy-worker/src/patpat.ts
+// deployments/telemetry.ts
 var import_client_web = __toESM(require_dist2(), 1);
-var patpat_default = {
+var telemetry_default = {
   async fetch(req, env) {
-    const url = new URL(req.url);
     const clickhouseClient = (0, import_client_web.createClient)({
       url: env.CLICKHOUSE_URL,
       password: env.CLICKHOUSE_PASSWORD
     });
-    if (url.pathname === "/read") {
-      const query = "SELECT id, time FROM patpat_log";
-      const result = await clickhouseClient.query({
-        query,
-        format: "JSONEachRow"
-      });
-      const rows = await result.json();
-      return new Response(JSON.stringify(rows), {
-        headers: { "Content-Type": "application/json" }
-      });
-    } else if (url.pathname === "/") {
-      const id2 = id();
-      await clickhouseClient.insert({
-        table: "patpat_log",
-        values: [{ id: id2, time: (/* @__PURE__ */ new Date()).toISOString() }],
-        format: "JSONEachRow"
-      });
-      return new Response(JSON.stringify({ success: true }), {
-        headers: { "Content-Type": "application/json" }
-      });
-    } else {
-      return new Response("Not found", { status: 404 });
-    }
+    const body = await req.json();
+    console.log(body);
+    body.timestamp = Date.now();
+    const table = `${body.event.split(".")[0]}_telemetry`;
+    await clickhouseClient.insert({
+      table,
+      values: [body],
+      format: "JSONEachRow"
+    });
+    return new Response();
   }
 };
 export {
-  patpat_default as default
+  telemetry_default as default
 };
-//# sourceMappingURL=patpat.js.map
+//# sourceMappingURL=telemetry.js.map

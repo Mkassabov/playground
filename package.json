@@ -5,7 +5,8 @@
 	"devDependencies": {
 		"@biomejs/biome": "2.0.6",
 		"@cloudflare/workers-types": "^4.20250805.0",
-		"@types/bun": "latest"
+		"@types/bun": "latest",
+		"clickhouse-migrations": "^1.1.0"
 	},
 	"peerDependencies": {
 		"typescript": "^5.0.0"
@@ -15,6 +16,7 @@
 	],
 	"dependencies": {
 		"@clickhouse/client-web": "^1.12.1",
-		"alchemy": "link:alchemy"
+		"alchemy": "link:alchemy",
+		"pathe": "^2.0.3"
 	}
 }

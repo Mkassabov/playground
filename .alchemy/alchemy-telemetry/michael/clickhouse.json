@@ -1,23 +1,23 @@
 {
   "kind": "clickhouse::Service",
   "id": "clickhouse",
-  "fqn": "alchemy-test-clickhouse/michael/clickhouse",
+  "fqn": "alchemy-telemetry/michael/clickhouse",
   "seq": 0,
   "data": {},
   "status": "created",
   "output": {
     "Symbol(alchemy::ResourceKind)": "clickhouse::Service",
     "Symbol(alchemy::ResourceID)": "clickhouse",
-    "Symbol(alchemy::ResourceFQN)": "alchemy-test-clickhouse/michael/clickhouse",
+    "Symbol(alchemy::ResourceFQN)": "alchemy-telemetry/michael/clickhouse",
     "Symbol(alchemy::ResourceScope)": {
       "@scope": null
     },
     "Symbol(alchemy::ResourceSeq)": 0,
     "organizationId": "bfd6a955-0745-4668-ae53-0e12887a74fd",
-    "name": "alchemy-test-clickhouse-clickhouse-michael",
-    "clickhouseId": "07514591-38da-4477-82d1-0243ab7e77d2",
+    "name": "alchemy-telemetry-clickhouse-michael",
+    "clickhouseId": "3bce0b52-1631-40cc-9262-a222150bef17",
     "password": {
-      "@secret": "5WmnTBLo/vKq5cf8V4flwS2iSDnZr2ZglziR2bH2lv8E0oCIv944zO98hlSpOBtNk9l/ho8="
+      "@secret": "cRLK1UJXQdf8xfoA1/rtijdBI8ggVF3Z1D6zDSOBrKk6GBXLJvGwk+hWQlaqnZl8IT0aS4g="
     },
     "provider": "aws",
     "region": "us-east-1",
@@ -33,35 +33,33 @@
     "idleScaling": true,
     "idleTimeoutMinutes": 15,
     "isReadonly": false,
-    "dataWarehouseId": "085af612-5b16-4be9-b019-966652685279",
+    "dataWarehouseId": "759340e9-faaf-457f-8537-650e8695d25f",
     "releaseChannel": "default",
     "hasTransparentDataEncryption": false,
-    "endpoints": [
-      {
-        "protocol": "nativesecure",
-        "host": "bxbjyogpoo.us-east-1.aws.clickhouse.cloud",
-        "port": 9440
-      },
-      {
-        "protocol": "https",
-        "host": "bxbjyogpoo.us-east-1.aws.clickhouse.cloud",
-        "port": 8443
-      },
-      {
-        "protocol": "mysql",
-        "host": "bxbjyogpoo.us-east-1.aws.clickhouse.cloud",
-        "port": 3306,
-        "username": "mysql4bxbjyogpoo"
-      }
-    ],
     "profile": "v1-default",
     "stateTarget": "start",
-    "state": "provisioning"
+    "state": "provisioning",
+    "mysqlEndpoint": {
+      "protocol": "mysql",
+      "host": "xvgmv0foar.us-east-1.aws.clickhouse.cloud",
+      "port": 3306,
+      "username": "mysql4xvgmv0foar"
+    },
+    "httpsEndpoint": {
+      "protocol": "https",
+      "host": "xvgmv0foar.us-east-1.aws.clickhouse.cloud",
+      "port": 8443
+    },
+    "nativesecureEndpoint": {
+      "protocol": "nativesecure",
+      "host": "xvgmv0foar.us-east-1.aws.clickhouse.cloud",
+      "port": 9440
+    }
   },
   "props": {
     "organization": {
       "id": "bfd6a955-0745-4668-ae53-0e12887a74fd",
-      "name": "MK's Organization",
+      "name": "Alchemy",
       "createdAt": "2025-09-19T03:15:59Z",
       "privateEndpoints": []
     },
@@ -69,6 +67,7 @@
     "region": "us-east-1",
     "minReplicaMemoryGb": 8,
     "maxReplicaMemoryGb": 356,
-    "numReplicas": 3
+    "numReplicas": 3,
+    "enableMysqlEndpoint": true
   }
 }

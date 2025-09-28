@@ -1,38 +1,40 @@
 import alchemy from "alchemy";
 import { Service, getOrganizationByName } from "alchemy/clickhouse";
 import { Worker } from "alchemy/cloudflare";
+import { Exec } from "alchemy/os";
+import { join } from "pathe";
 
-export const app = await alchemy("alchemy-test-clickhouse", {
-	telemetry: false,
+export const app = await alchemy("alchemy-telemetry", {
+	noTrack: false,
 });
 
-const organization = await getOrganizationByName("MK's Organization");
+const organization = await getOrganizationByName("Alchemy");
 
-console.log(organization);
-
-const service = await Service("clickhouse", {
+const clickhouse = await Service("clickhouse", {
 	organization,
 	provider: "aws",
 	region: "us-east-1",
 	minReplicaMemoryGb: 8,
 	maxReplicaMemoryGb: 356,
 	numReplicas: 3,
+	enableMysqlEndpoint: true,
 });
 
-console.log(service);
+await Exec("migrations", {
+	command: `bunx clickhouse-migrations migrate --db default --host https://${clickhouse.httpsEndpoint?.host}:${clickhouse.httpsEndpoint?.port} --user ${clickhouse.mysqlEndpoint?.username} --password ${clickhouse.password.unencrypted} --migrations-home ${join(import.meta.dirname, "migrations")}`,
+});
 
-// biome-ignore lint/style/noNonNullAssertion: gross
-const serviceEndpoint = service.endpoints.find(
-	(endpoint) => endpoint.protocol === "https",
-)!;
-
-export const patpat = await Worker("patpat", {
-	entrypoint: "./deployments/alchemy-worker/src/patpat.ts",
+export const ingestWorker = await Worker("ingest-worker", {
+	adopt: true,
+	entrypoint: "./deployments/telemetry.ts",
 	bindings: {
-		CLICKHOUSE_URL: `https://${serviceEndpoint.host}:${serviceEndpoint.port}`,
-		CLICKHOUSE_PASSWORD: service.password,
+		CLICKHOUSE_URL: `https://${clickhouse.httpsEndpoint?.host}:${clickhouse.httpsEndpoint?.port}`,
+		CLICKHOUSE_PASSWORD: clickhouse.password,
 	},
+	url: true,
 });
+
+console.log(ingestWorker.url);
 
 await app.finalize();
 

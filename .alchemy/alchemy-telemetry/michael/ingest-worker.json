@@ -1,0 +1,53 @@
+{
+  "kind": "cloudflare::Worker",
+  "id": "ingest-worker",
+  "fqn": "alchemy-telemetry/michael/ingest-worker",
+  "seq": 2,
+  "data": {},
+  "status": "updated",
+  "output": {
+    "Symbol(alchemy::ResourceKind)": "cloudflare::Worker",
+    "Symbol(alchemy::ResourceID)": "ingest-worker",
+    "Symbol(alchemy::ResourceFQN)": "alchemy-telemetry/michael/ingest-worker",
+    "Symbol(alchemy::ResourceScope)": {
+      "@scope": null
+    },
+    "Symbol(alchemy::ResourceSeq)": 2,
+    "adopt": true,
+    "entrypoint": "./deployments/telemetry.ts",
+    "bindings": {
+      "CLICKHOUSE_URL": "https://xvgmv0foar.us-east-1.aws.clickhouse.cloud:8443",
+      "CLICKHOUSE_PASSWORD": {
+        "@secret": "1OxavXpTIcTrORe4Uz+mwrr0eAkS/zsHCNBWsbcE+OlhWejxkSTao6DEu6GYSbjO5CBEYGs="
+      }
+    },
+    "url": "https://alchemy-telemetry-ingest-worker-michael.michael-a24.workers.dev",
+    "type": "service",
+    "id": "ingest-worker",
+    "name": "alchemy-telemetry-ingest-worker-michael",
+    "cwd": "",
+    "compatibilityDate": "2025-09-13",
+    "compatibilityFlags": [],
+    "format": "esm",
+    "createdAt": {
+      "@date": "2025-09-26T11:24:04.135Z"
+    },
+    "updatedAt": {
+      "@date": "2025-09-26T18:26:30.413Z"
+    },
+    "dev": {
+      "hasRemote": true
+    }
+  },
+  "props": {
+    "adopt": true,
+    "entrypoint": "./deployments/telemetry.ts",
+    "bindings": {
+      "CLICKHOUSE_URL": "https://xvgmv0foar.us-east-1.aws.clickhouse.cloud:8443",
+      "CLICKHOUSE_PASSWORD": {
+        "@secret": "8S8Nu5bBa7QcWUz+06vTBp4E68OOO3ahltz4yrRbgrZ9c6A2osHjZ5/01cIm8Rxb4AbbTpU="
+      }
+    },
+    "url": true
+  }
+}

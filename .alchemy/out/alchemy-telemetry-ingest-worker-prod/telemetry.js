@@ -2476,7 +2476,6 @@ var telemetry_default = {
       password: env.CLICKHOUSE_PASSWORD
     });
     const body = await req.json();
-    console.log(body);
     body.timestamp = Date.now();
     const table = `${body.event.split(".")[0]}_telemetry`;
     await clickhouseClient.insert({

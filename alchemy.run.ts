@@ -3,12 +3,13 @@ import { Service, getOrganizationByName } from "alchemy/clickhouse";
 import { Worker } from "alchemy/cloudflare";
 import { Exec } from "alchemy/os";
 import { join } from "pathe";
+import { CloudflareStateStore } from "alchemy/state";
 
 export const app = await alchemy("alchemy-telemetry", {
-	noTrack: false,
+	stateStore: (scope) => new CloudflareStateStore(scope),
 });
 
-const organization = await getOrganizationByName("Alchemy");
+const organization = await getOrganizationByName(alchemy.env.CLICKHOUSE_ORG);
 
 const clickhouse = await Service("clickhouse", {
 	organization,
@@ -31,7 +32,7 @@ export const ingestWorker = await Worker("ingest-worker", {
 		CLICKHOUSE_URL: `https://${clickhouse.httpsEndpoint?.host}:${clickhouse.httpsEndpoint?.port}`,
 		CLICKHOUSE_PASSWORD: clickhouse.password,
 	},
-	url: true,
+	domains: ["telemetry.alchemy.run"],
 });
 
 console.log(ingestWorker.url);

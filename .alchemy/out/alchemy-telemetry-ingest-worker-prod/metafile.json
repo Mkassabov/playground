@@ -508,7 +508,7 @@
       "format": "cjs"
     },
     "deployments/telemetry.ts": {
-      "bytes": 598,
+      "bytes": 577,
       "imports": [
         {
           "path": "node_modules/@clickhouse/client-web/dist/index.js",
@@ -520,13 +520,13 @@
     }
   },
   "outputs": {
-    ".alchemy/out/alchemy-telemetry-ingest-worker-michael/telemetry.js.map": {
+    ".alchemy/out/alchemy-telemetry-ingest-worker-prod/telemetry.js.map": {
       "imports": [],
       "exports": [],
       "inputs": {},
-      "bytes": 41269
+      "bytes": 41190
     },
-    ".alchemy/out/alchemy-telemetry-ingest-worker-michael/telemetry.js": {
+    ".alchemy/out/alchemy-telemetry-ingest-worker-prod/telemetry.js": {
       "imports": [],
       "exports": [
         "default"
@@ -615,10 +615,10 @@
           "bytesInOutput": 2676
         },
         "deployments/telemetry.ts": {
-          "bytesInOutput": 542
+          "bytesInOutput": 519
         }
       },
-      "bytes": 95473
+      "bytes": 95450
     }
   }
 }

@@ -14,6 +14,7 @@
 		"deployments/*"
 	],
 	"dependencies": {
-		"alchemy": "link:alchemy"
+		"env-paths": "^3.0.0",
+		"pathe": "^2.0.3"
 	}
 }

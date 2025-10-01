@@ -1,5 +1,5 @@
 import alchemy from "alchemy";
-import { Service, getOrganizationByName } from "alchemy/clickhouse";
+import { Service, OrganizationRef } from "alchemy/clickhouse";
 import { Worker } from "alchemy/cloudflare";
 import { Exec } from "alchemy/os";
 import { join } from "pathe";
@@ -9,7 +9,7 @@ export const app = await alchemy("alchemy-telemetry", {
 	stateStore: (scope) => new CloudflareStateStore(scope),
 });
 
-const organization = await getOrganizationByName(alchemy.env.CLICKHOUSE_ORG);
+const organization = await OrganizationRef(alchemy.env.CLICKHOUSE_ORG);
 
 const clickhouse = await Service("clickhouse", {
 	organization,
@@ -38,7 +38,3 @@ export const ingestWorker = await Worker("ingest-worker", {
 console.log(ingestWorker.url);
 
 await app.finalize();
-
-// await app.finalize();
-
-// console.log(apiKey);

@@ -14,6 +14,6 @@
 		"deployments/*"
 	],
 	"dependencies": {
-		"alchemy": "link:alchemy"
+		"alchemy": "latest"
 	}
 }

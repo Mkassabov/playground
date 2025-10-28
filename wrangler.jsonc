@@ -1,0 +1,8 @@
+{
+  "name": "test-2-michael-wrangler",
+  "main": "deployments/alchemy-worker/src/patpat.ts",
+  "compatibility_date": "2025-10-14",
+  "compatibility_flags": [],
+  "upload_source_maps": true,
+  "observability": { "enabled": true },
+}

@@ -1,19 +1,19 @@
 {
-	"name": "playground",
-	"module": "index.ts",
-	"type": "module",
-	"devDependencies": {
-		"@biomejs/biome": "2.0.6",
-		"@cloudflare/workers-types": "^4.20250805.0",
-		"@types/bun": "latest"
-	},
-	"peerDependencies": {
-		"typescript": "^5.0.0"
-	},
-	"workspaces": [
-		"deployments/*"
-	],
-	"dependencies": {
-		"alchemy": "latest"
-	}
+  "name": "playground",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250805.0",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "workspaces": [
+    "deployments/*"
+  ],
+  "dependencies": {
+    "oxfmt": "^0.5.0",
+    "alchemy": "link:alchemy"
+  }
 }

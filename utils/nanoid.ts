@@ -21,6 +21,7 @@ export function idGenerator(alphabet: string, defaultSize: number) {
   const step = Math.ceil((1.6 * mask * defaultSize) / alphabet.length);
 
   return (size = defaultSize) => {
+    // throw new Error("Error with good stack trace");
     let id = "";
     while (true) {
       fillPool(step);

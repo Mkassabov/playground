@@ -23,7 +23,7 @@ the worker can be deployed with `bunx wrangler deploy` OR with `bunx alchemy dep
 
 ## Sourcemaps
 
-If deploying with alchemy the sourcemap alchemy uploads to cloudflare will be available at `.alchemy\out\bad-stack-trace-error-worker-bug\patpat.js.map`. There is a sample `./alchemy` folder uploaded in this repo. Normally committing the `.alchemy` folder in git is not recommended but this is a bug report with no secrets so its fine.
+If deploying with alchemy the sourcemap alchemy uploads to cloudflare will be available at [`.alchemy\out\bad-stack-trace-error-worker-bug\patpat.js.map`](https://github.com/Mkassabov/playground/blob/3fff434d10ba801682ef2b3b666e90f68b7be088/.alchemy/out/bad-stack-trace-error-worker-bug/patpat.js.map#L1). There is a sample `./alchemy` folder uploaded in this repo. Normally committing the `.alchemy` folder in git is not recommended but this is a bug report with no secrets so its fine.
 
 `bunx wrangler build` will create a sourcemap at `dist\patpat.js.map` however this sourcemap will have `sources` relative to the `dist` directory NOT the file names uploaded to cloudflare. Wrangler does not save the corrected sourcemap to disk but they are corrected prior to uploading to cloudflare using `bunx wrangler deploy`
 

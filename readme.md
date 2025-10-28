@@ -1,6 +1,17 @@
-## Cloudflare Sourcemap Bug
+# Cloudflare Sourcemap Bug
 
 Cloudflare seems to ignore sourcemaps in the observability dashboard (and possibly other places) if the error is thrown in the worker's entrypoint.
+
+## Testing
+
+1. run `bun install`
+2. uncomment one of the errors mentioned below
+3. deploy the worker using [alchemy or wrangler](#deploying-the-worker)
+4. load the observability dashboard for the worker and start listening to live invocations
+5. navigate to the worker's url in a new tab (the worker should error)
+6. return to the observability dashboard and see the error in the live invocations
+
+### Error Causing Bad Stack Trace
 
 if you uncomment the error in the fetch handler: https://github.com/Mkassabov/playground/blob/27bb928289a9a82b71a05920a6e3c3e9a88724e9/deployments/alchemy-worker/src/patpat.ts#L8
 
@@ -8,6 +19,8 @@ the stack trace will be incorrect. with the stack trace in the cloudflare observ
 ```
   at Object.fetch (patpat.js:51:11)
 ```
+
+### Error Causing Good Stack Trace
 
 if you instead uncomment the error in the nanoid file: https://github.com/Mkassabov/playground/blob/27bb928289a9a82b71a05920a6e3c3e9a88724e9/utils/nanoid.ts#L24
 

@@ -1,0 +1,40 @@
+{
+  "kind": "cloudflare::Worker",
+  "id": "error-worker",
+  "fqn": "bad-stack-trace/bug/error-worker",
+  "seq": 0,
+  "data": {},
+  "status": "created",
+  "output": {
+    "Symbol(alchemy::ResourceKind)": "cloudflare::Worker",
+    "Symbol(alchemy::ResourceID)": "error-worker",
+    "Symbol(alchemy::ResourceFQN)": "bad-stack-trace/bug/error-worker",
+    "Symbol(alchemy::ResourceScope)": {
+      "@scope": null
+    },
+    "Symbol(alchemy::ResourceSeq)": 0,
+    "entrypoint": "./deployments/alchemy-worker/src/patpat.ts",
+    "url": "https://bad-stack-trace-error-worker-bug.michael-a24.workers.dev",
+    "type": "service",
+    "id": "error-worker",
+    "name": "bad-stack-trace-error-worker-bug",
+    "cwd": "",
+    "compatibilityDate": "2025-10-14",
+    "compatibilityFlags": [],
+    "format": "esm",
+    "bindings": {},
+    "createdAt": {
+      "@date": "2025-10-28T21:44:11.768Z"
+    },
+    "updatedAt": {
+      "@date": "2025-10-28T21:44:11.768Z"
+    },
+    "dev": {
+      "hasRemote": true
+    }
+  },
+  "props": {
+    "entrypoint": "./deployments/alchemy-worker/src/patpat.ts",
+    "url": true
+  }
+}

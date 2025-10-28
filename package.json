@@ -13,7 +13,7 @@
     "deployments/*"
   ],
   "dependencies": {
-    "oxfmt": "^0.5.0",
-    "alchemy": "link:alchemy"
+    "alchemy": "https://pkg.pr.new/alchemy-run/alchemy@1185",
+    "oxfmt": "^0.5.0"
   }
 }

@@ -1,0 +1,23 @@
+{
+  "kind": "cloudflare::WorkerSubdomain",
+  "id": "url",
+  "fqn": "bad-stack-trace/bug/error-worker/url",
+  "seq": 0,
+  "data": {},
+  "status": "created",
+  "output": {
+    "Symbol(alchemy::ResourceKind)": "cloudflare::WorkerSubdomain",
+    "Symbol(alchemy::ResourceID)": "url",
+    "Symbol(alchemy::ResourceFQN)": "bad-stack-trace/bug/error-worker/url",
+    "Symbol(alchemy::ResourceScope)": {
+      "@scope": null
+    },
+    "Symbol(alchemy::ResourceSeq)": 0,
+    "url": "https://bad-stack-trace-error-worker-bug.michael-a24.workers.dev"
+  },
+  "props": {
+    "scriptName": "bad-stack-trace-error-worker-bug",
+    "retain": false,
+    "dev": false
+  }
+}

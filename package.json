@@ -13,7 +13,8 @@
     "deployments/*"
   ],
   "dependencies": {
-    "oxfmt": "^0.5.0",
-    "alchemy": "link:alchemy"
+    "alchemy": "0.82.1",
+    "drizzle-orm": "^0.45.1",
+    "oxfmt": "^0.5.0"
   }
 }

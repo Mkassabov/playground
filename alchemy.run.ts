@@ -6,10 +6,13 @@ import {
   Route,
   HyperdriveRef,
 } from "alchemy/cloudflare";
+import { SQLiteStateStore } from "alchemy/state";
 
 const mode = "remote" as "remote" | "local";
 
-const app = await alchemy("instant-destroy");
+const app = await alchemy("instant-destroy", {
+  stateStore: (scope) => new SQLiteStateStore(scope),
+});
 
 // Site configuration type
 interface SiteConfig {

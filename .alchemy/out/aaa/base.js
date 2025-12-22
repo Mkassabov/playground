@@ -1,7 +1,7 @@
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 
-// ../../../code/OSS/alchemy/alchemy/node_modules/.bun/unenv@2.0.0-rc.21/node_modules/unenv/dist/runtime/_internal/utils.mjs
+// node_modules/unenv/dist/runtime/_internal/utils.mjs
 // @__NO_SIDE_EFFECTS__
 function createNotImplementedError(name) {
   return new Error(`[unenv] ${name} is not implemented yet!`);
@@ -26,7 +26,7 @@ function notImplementedClass(name) {
 }
 __name(notImplementedClass, "notImplementedClass");
 
-// ../../../code/OSS/alchemy/alchemy/node_modules/.bun/unenv@2.0.0-rc.21/node_modules/unenv/dist/runtime/node/internal/perf_hooks/performance.mjs
+// node_modules/unenv/dist/runtime/node/internal/perf_hooks/performance.mjs
 var _timeOrigin = globalThis.performance?.timeOrigin ?? Date.now();
 var _performanceNow = globalThis.performance?.now ? globalThis.performance.now.bind(globalThis.performance) : () => Date.now() - _timeOrigin;
 var nodeTiming = {
@@ -264,7 +264,7 @@ var PerformanceObserver = class {
 };
 var performance = globalThis.performance && "addEventListener" in globalThis.performance ? globalThis.performance : new Performance();
 
-// ../../../code/OSS/alchemy/alchemy/node_modules/.bun/@cloudflare+unenv-preset@2.7.7+438e337cb338403d/node_modules/@cloudflare/unenv-preset/dist/runtime/polyfill/performance.mjs
+// node_modules/@cloudflare/unenv-preset/dist/runtime/polyfill/performance.mjs
 globalThis.performance = performance;
 globalThis.Performance = Performance;
 globalThis.PerformanceEntry = PerformanceEntry;
@@ -274,14 +274,14 @@ globalThis.PerformanceObserver = PerformanceObserver;
 globalThis.PerformanceObserverEntryList = PerformanceObserverEntryList;
 globalThis.PerformanceResourceTiming = PerformanceResourceTiming;
 
-// ../../../code/OSS/alchemy/alchemy/node_modules/.bun/unenv@2.0.0-rc.21/node_modules/unenv/dist/runtime/node/console.mjs
+// node_modules/unenv/dist/runtime/node/console.mjs
 import { Writable } from "node:stream";
 
-// ../../../code/OSS/alchemy/alchemy/node_modules/.bun/unenv@2.0.0-rc.21/node_modules/unenv/dist/runtime/mock/noop.mjs
+// node_modules/unenv/dist/runtime/mock/noop.mjs
 var noop_default = Object.assign(() => {
 }, { __unenv__: true });
 
-// ../../../code/OSS/alchemy/alchemy/node_modules/.bun/unenv@2.0.0-rc.21/node_modules/unenv/dist/runtime/node/console.mjs
+// node_modules/unenv/dist/runtime/node/console.mjs
 var _console = globalThis.console;
 var _ignoreErrors = true;
 var _stderr = new Writable();
@@ -313,7 +313,7 @@ var _times = /* @__PURE__ */ new Map();
 var _stdoutErrorHandler = noop_default;
 var _stderrErrorHandler = noop_default;
 
-// ../../../code/OSS/alchemy/alchemy/node_modules/.bun/@cloudflare+unenv-preset@2.7.7+438e337cb338403d/node_modules/@cloudflare/unenv-preset/dist/runtime/node/console.mjs
+// node_modules/@cloudflare/unenv-preset/dist/runtime/node/console.mjs
 var workerdConsole = globalThis["console"];
 var {
   assert,
@@ -354,10 +354,10 @@ Object.assign(workerdConsole, {
 });
 var console_default = workerdConsole;
 
-// ../../../code/OSS/alchemy/alchemy/alchemy/src/cloudflare/bundle/_virtual_unenv_global_polyfill-@cloudflare-unenv-preset-node-console
+// node_modules/alchemy/src/cloudflare/bundle/_virtual_unenv_global_polyfill-@cloudflare-unenv-preset-node-console
 globalThis.console = console_default;
 
-// ../../../code/OSS/alchemy/alchemy/node_modules/.bun/unenv@2.0.0-rc.21/node_modules/unenv/dist/runtime/node/internal/process/hrtime.mjs
+// node_modules/unenv/dist/runtime/node/internal/process/hrtime.mjs
 var hrtime = /* @__PURE__ */ Object.assign(/* @__PURE__ */ __name(function hrtime2(startTime) {
   const now = Date.now();
   const seconds = Math.trunc(now / 1e3);
@@ -376,10 +376,10 @@ var hrtime = /* @__PURE__ */ Object.assign(/* @__PURE__ */ __name(function hrtim
   return BigInt(Date.now() * 1e6);
 }, "bigint") });
 
-// ../../../code/OSS/alchemy/alchemy/node_modules/.bun/unenv@2.0.0-rc.21/node_modules/unenv/dist/runtime/node/internal/process/process.mjs
+// node_modules/unenv/dist/runtime/node/internal/process/process.mjs
 import { EventEmitter } from "node:events";
 
-// ../../../code/OSS/alchemy/alchemy/node_modules/.bun/unenv@2.0.0-rc.21/node_modules/unenv/dist/runtime/node/internal/tty/read-stream.mjs
+// node_modules/unenv/dist/runtime/node/internal/tty/read-stream.mjs
 var ReadStream = class {
   static {
     __name(this, "ReadStream");
@@ -396,7 +396,7 @@ var ReadStream = class {
   }
 };
 
-// ../../../code/OSS/alchemy/alchemy/node_modules/.bun/unenv@2.0.0-rc.21/node_modules/unenv/dist/runtime/node/internal/tty/write-stream.mjs
+// node_modules/unenv/dist/runtime/node/internal/tty/write-stream.mjs
 var WriteStream = class {
   static {
     __name(this, "WriteStream");
@@ -446,10 +446,10 @@ var WriteStream = class {
   }
 };
 
-// ../../../code/OSS/alchemy/alchemy/node_modules/.bun/unenv@2.0.0-rc.21/node_modules/unenv/dist/runtime/node/internal/process/node-version.mjs
+// node_modules/unenv/dist/runtime/node/internal/process/node-version.mjs
 var NODE_VERSION = "22.14.0";
 
-// ../../../code/OSS/alchemy/alchemy/node_modules/.bun/unenv@2.0.0-rc.21/node_modules/unenv/dist/runtime/node/internal/process/process.mjs
+// node_modules/unenv/dist/runtime/node/internal/process/process.mjs
 var Process = class _Process extends EventEmitter {
   static {
     __name(this, "Process");
@@ -684,7 +684,7 @@ var Process = class _Process extends EventEmitter {
   _linkedBinding = void 0;
 };
 
-// ../../../code/OSS/alchemy/alchemy/node_modules/.bun/@cloudflare+unenv-preset@2.7.7+438e337cb338403d/node_modules/@cloudflare/unenv-preset/dist/runtime/node/process.mjs
+// node_modules/@cloudflare/unenv-preset/dist/runtime/node/process.mjs
 var globalProcess = globalThis["process"];
 var getBuiltinModule = globalProcess.getBuiltinModule;
 var workerdProcess = getBuiltinModule("node:process");
@@ -942,7 +942,7 @@ var _process = {
 };
 var process_default = _process;
 
-// ../../../code/OSS/alchemy/alchemy/alchemy/src/cloudflare/bundle/_virtual_unenv_global_polyfill-@cloudflare-unenv-preset-node-process
+// node_modules/alchemy/src/cloudflare/bundle/_virtual_unenv_global_polyfill-@cloudflare-unenv-preset-node-process
 globalThis.process = process_default;
 
 // utils/nanoid.ts

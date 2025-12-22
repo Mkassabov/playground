@@ -1,8 +1,6 @@
 {
-  "name": "test-2-michael-wrangler",
+  "name": "app-form-builder-islamzaoui",
   "main": "deployments/alchemy-worker/src/patpat.ts",
-  "compatibility_date": "2025-10-14",
-  "compatibility_flags": [],
-  "upload_source_maps": true,
-  "observability": { "enabled": true },
+  "compatibility_date": "2025-10-11",
+  "compatibility_flags": []
 }

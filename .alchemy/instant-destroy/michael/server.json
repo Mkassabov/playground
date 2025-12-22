@@ -1,0 +1,113 @@
+{
+  "kind": "cloudflare::Worker",
+  "id": "server",
+  "fqn": "instant-destroy/michael/server",
+  "seq": 0,
+  "data": {},
+  "status": "updated",
+  "output": {
+    "Symbol(alchemy::ResourceKind)": "cloudflare::Worker",
+    "Symbol(alchemy::ResourceID)": "server",
+    "Symbol(alchemy::ResourceFQN)": "instant-destroy/michael/server",
+    "Symbol(alchemy::ResourceScope)": {
+      "@scope": null
+    },
+    "Symbol(alchemy::ResourceSeq)": 0,
+    "entrypoint": "src/workers/base.ts",
+    "compatibility": "node",
+    "url": "https://aaa.michael-a24.workers.dev",
+    "bindings": {
+      "DB": {
+        "type": "hyperdrive",
+        "name": "undoc",
+        "hyperdriveId": "acb0cccb5a62487e93eb04b7c927c5c2",
+        "dev": {
+          "origin": {
+            "@secret": {
+              "version": "v1",
+              "ciphertext": "tt1QaFBaAXuOCQlqQDiwY4kP1PUrwt1yU5Ok1nH6uBLqD+BNluM2szhNRuRTzcw0M/ZWOrloBgw/NxN2NHo1Nhz74Itc3J6g2LF6p8q/BYZ3Z5gHb/k/F3Eu6k2K2r8atnPtKAmZy92W9rOYO0eCSiO+Ig3gyvxAcM9V3qAYAu1puKTxLHlgdW4IQB5v4BI=",
+              "iv": "1lt5SRmNYA5/jjaM",
+              "salt": "hBQhrWxghzyqo5HzyTW72A==",
+              "tag": "zZnyHgpbEDbLmS4g41z83A=="
+            }
+          }
+        }
+      },
+      "CONTENT_WORKER_URL": "http://localhost:3002"
+    },
+    "dev": {
+      "hasRemote": true
+    },
+    "name": "aaa",
+    "adopt": true,
+    "observability": {
+      "enabled": true,
+      "headSamplingRate": 1,
+      "traces": {
+        "enabled": true,
+        "destinations": [
+          "axiom-traces"
+        ],
+        "persist": true,
+        "headSamplingRate": 1
+      }
+    },
+    "type": "service",
+    "id": "server",
+    "cwd": "",
+    "compatibilityDate": "2025-10-11",
+    "compatibilityFlags": [
+      "nodejs_compat",
+      "nodejs_compat_populate_process_env"
+    ],
+    "format": "esm",
+    "createdAt": {
+      "@date": "2025-12-22T15:52:41.041Z"
+    },
+    "updatedAt": {
+      "@date": "2025-12-22T16:01:15.609Z"
+    }
+  },
+  "props": {
+    "entrypoint": "src/workers/base.ts",
+    "compatibility": "node",
+    "url": true,
+    "bindings": {
+      "DB": {
+        "type": "hyperdrive",
+        "name": "undoc",
+        "hyperdriveId": "acb0cccb5a62487e93eb04b7c927c5c2",
+        "dev": {
+          "origin": {
+            "@secret": {
+              "version": "v1",
+              "ciphertext": "DIhkRwzYTOTtrQtc8IXnRPJiFz0IMneMmMDpro/ouOy1rOAf8JUcWSU+wPcO+T/vUg2KQ9D7SppauvxiuTa6Ja5uTirp/vmRCD4670UAIDEKwx74cMJ7TbbnMyMvjN6s0Vzn2W9O56LgPa9K2YDpwYa8P1JBZwObwxiDUHDkxTkdtCsEoy0xbFZUMDJy+Vg=",
+              "iv": "miCtYMiI2KyoA0gC",
+              "salt": "xgRv/AvqrBRtW7xjOJga4g==",
+              "tag": "Yu3A5DryTov3MJ6CEvYKLQ=="
+            }
+          }
+        }
+      },
+      "CONTENT_WORKER_URL": "http://localhost:3002"
+    },
+    "dev": {
+      "remote": true,
+      "port": 3000
+    },
+    "name": "aaa",
+    "adopt": true,
+    "observability": {
+      "enabled": true,
+      "headSamplingRate": 1,
+      "traces": {
+        "enabled": true,
+        "destinations": [
+          "axiom-traces"
+        ],
+        "persist": true,
+        "headSamplingRate": 1
+      }
+    }
+  }
+}

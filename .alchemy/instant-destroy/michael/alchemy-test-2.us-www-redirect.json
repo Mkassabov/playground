@@ -1,0 +1,62 @@
+{
+  "kind": "cloudflare::Ruleset",
+  "id": "alchemy-test-2.us-www-redirect",
+  "fqn": "instant-destroy/michael/alchemy-test-2.us-www-redirect",
+  "seq": 5,
+  "data": {},
+  "status": "created",
+  "output": {
+    "Symbol(alchemy::ResourceKind)": "cloudflare::Ruleset",
+    "Symbol(alchemy::ResourceID)": "alchemy-test-2.us-www-redirect",
+    "Symbol(alchemy::ResourceFQN)": "instant-destroy/michael/alchemy-test-2.us-www-redirect",
+    "Symbol(alchemy::ResourceScope)": {
+      "@scope": null
+    },
+    "Symbol(alchemy::ResourceSeq)": 5,
+    "id": "78bac5ba842642fdb54347774d38b8d9",
+    "zoneId": "98046837bf56dd22a505ac63d1fcd325",
+    "phase": "http_request_dynamic_redirect",
+    "name": "Zone-level redirect ruleset",
+    "rules": [
+      {
+        "action": "redirect",
+        "action_parameters": {
+          "from_value": {
+            "status_code": 301,
+            "target_url": {
+              "expression": "concat(\"https://www.alchemy-test-2.us\", http.request.uri.path)"
+            }
+          }
+        },
+        "description": "Redirect non-www to www",
+        "enabled": true,
+        "expression": "(http.host eq \"alchemy-test-2.us\")",
+        "id": "f2166d9eb2ac468283e11c9d1af56aab",
+        "last_updated": "2025-12-22T16:00:48.952993Z",
+        "ref": "f2166d9eb2ac468283e11c9d1af56aab",
+        "version": "1"
+      }
+    ],
+    "lastUpdated": "2025-12-22T16:00:48.952993Z",
+    "version": "31"
+  },
+  "props": {
+    "zone": "alchemy-test-2.us",
+    "phase": "http_request_dynamic_redirect",
+    "rules": [
+      {
+        "description": "Redirect non-www to www",
+        "expression": "(http.host eq \"alchemy-test-2.us\")",
+        "action": "redirect",
+        "action_parameters": {
+          "from_value": {
+            "status_code": 301,
+            "target_url": {
+              "expression": "concat(\"https://www.alchemy-test-2.us\", http.request.uri.path)"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

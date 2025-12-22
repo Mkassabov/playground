@@ -1,0 +1,92 @@
+{
+  "kind": "cloudflare::Worker",
+  "id": "googlebot-cron",
+  "fqn": "instant-destroy/michael/googlebot-cron",
+  "seq": 2,
+  "data": {},
+  "status": "updated",
+  "output": {
+    "Symbol(alchemy::ResourceKind)": "cloudflare::Worker",
+    "Symbol(alchemy::ResourceID)": "googlebot-cron",
+    "Symbol(alchemy::ResourceFQN)": "instant-destroy/michael/googlebot-cron",
+    "Symbol(alchemy::ResourceScope)": {
+      "@scope": null
+    },
+    "Symbol(alchemy::ResourceSeq)": 2,
+    "name": "aaa-googlebot-cron",
+    "entrypoint": "src/cron/google-ips-cron.ts",
+    "compatibility": "node",
+    "bindings": {
+      "DB": {
+        "type": "hyperdrive",
+        "name": "undoc",
+        "hyperdriveId": "acb0cccb5a62487e93eb04b7c927c5c2",
+        "dev": {
+          "origin": {
+            "@secret": {
+              "version": "v1",
+              "ciphertext": "nRPyoMKC+45rpxdc7xgtBFeoL3e7kD7DMqUITDBeLet+mVKOI7dsJLBoPn/UuELmZ+XthySpjlokmQkAEzrwgnYheoi0b5H2lWHoXKiMr3nHosLHks693ClPk5pJtoSIf+Hp85PpGJ1JyhTPk86bk1nXuUgBBi5He2SXM3SCouCWvIgiS0UAsmCPzUzWmHc=",
+              "iv": "QDrMvIkPIe+0x/S2",
+              "salt": "Ic5Sn9eMdYnFyCifny2rtA==",
+              "tag": "OnkaZO9giDhhs49B3UGI+Q=="
+            }
+          }
+        }
+      }
+    },
+    "dev": {
+      "hasRemote": true
+    },
+    "crons": [
+      "*/5 * * * *"
+    ],
+    "adopt": true,
+    "type": "service",
+    "id": "googlebot-cron",
+    "cwd": "",
+    "compatibilityDate": "2025-10-11",
+    "compatibilityFlags": [
+      "nodejs_compat",
+      "nodejs_compat_populate_process_env"
+    ],
+    "format": "esm",
+    "createdAt": {
+      "@date": "2025-12-22T15:54:18.057Z"
+    },
+    "updatedAt": {
+      "@date": "2025-12-22T16:01:19.342Z"
+    }
+  },
+  "props": {
+    "name": "aaa-googlebot-cron",
+    "entrypoint": "src/cron/google-ips-cron.ts",
+    "compatibility": "node",
+    "bindings": {
+      "DB": {
+        "type": "hyperdrive",
+        "name": "undoc",
+        "hyperdriveId": "acb0cccb5a62487e93eb04b7c927c5c2",
+        "dev": {
+          "origin": {
+            "@secret": {
+              "version": "v1",
+              "ciphertext": "LT2Sns98B4YCa8Q2fbiLY8OfJE2nUNGmHtGp3kX28VhzmbmatcFH4vlzrPgzt6IuZy5Z8+zebZ0DSYkepEs/rO6j2FEZ7X4VNacIw2WX2OXHvV2mF11Wud0pfTrK1bRACNw260zBH44amzMgFCbvqsw0/KwQkWJWDg/z9TOYNNln+aPIZoCi+nbA8oF0V+I=",
+              "iv": "VHekLw04NvdBzmJM",
+              "salt": "aXzNjnfAAXstf1jdJuYIbA==",
+              "tag": "EOCFUkX7d9gQJTbAivbKGw=="
+            }
+          }
+        }
+      }
+    },
+    "dev": {
+      "remote": true,
+      "port": 3003
+    },
+    "crons": [
+      "*/5 * * * *"
+    ],
+    "url": false,
+    "adopt": true
+  }
+}

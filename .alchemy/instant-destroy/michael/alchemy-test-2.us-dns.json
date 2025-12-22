@@ -1,0 +1,63 @@
+{
+  "kind": "cloudflare::DnsRecords",
+  "id": "alchemy-test-2.us-dns",
+  "fqn": "instant-destroy/michael/alchemy-test-2.us-dns",
+  "seq": 7,
+  "data": {},
+  "status": "updated",
+  "output": {
+    "Symbol(alchemy::ResourceKind)": "cloudflare::DnsRecords",
+    "Symbol(alchemy::ResourceID)": "alchemy-test-2.us-dns",
+    "Symbol(alchemy::ResourceFQN)": "instant-destroy/michael/alchemy-test-2.us-dns",
+    "Symbol(alchemy::ResourceScope)": {
+      "@scope": null
+    },
+    "Symbol(alchemy::ResourceSeq)": 7,
+    "zoneId": "98046837bf56dd22a505ac63d1fcd325",
+    "records": [
+      {
+        "id": "a2b8345ca061966165c08015e190f369",
+        "name": "alchemy-test-2.us",
+        "type": "A",
+        "content": "192.0.2.1",
+        "ttl": 1,
+        "proxied": true,
+        "comment": null,
+        "tags": [],
+        "createdAt": 1759948301297,
+        "modifiedAt": 1766419248065,
+        "zoneId": "98046837bf56dd22a505ac63d1fcd325"
+      },
+      {
+        "id": "71a018cb629969e63ef5373b3fedc93c",
+        "name": "www.alchemy-test-2.us",
+        "type": "CNAME",
+        "content": "alchemy-test-2.us",
+        "ttl": 1,
+        "proxied": true,
+        "comment": null,
+        "tags": [],
+        "createdAt": 1766419248292,
+        "modifiedAt": 1766419281571,
+        "zoneId": "98046837bf56dd22a505ac63d1fcd325"
+      }
+    ]
+  },
+  "props": {
+    "zoneId": "98046837bf56dd22a505ac63d1fcd325",
+    "records": [
+      {
+        "name": "alchemy-test-2.us",
+        "type": "A",
+        "content": "192.0.2.1",
+        "proxied": true
+      },
+      {
+        "name": "www.alchemy-test-2.us",
+        "type": "CNAME",
+        "content": "alchemy-test-2.us",
+        "proxied": true
+      }
+    ]
+  }
+}

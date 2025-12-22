@@ -1,0 +1,87 @@
+{
+  "kind": "cloudflare::Worker",
+  "id": "api",
+  "fqn": "instant-destroy/michael/api",
+  "seq": 1,
+  "data": {},
+  "status": "updated",
+  "output": {
+    "Symbol(alchemy::ResourceKind)": "cloudflare::Worker",
+    "Symbol(alchemy::ResourceID)": "api",
+    "Symbol(alchemy::ResourceFQN)": "instant-destroy/michael/api",
+    "Symbol(alchemy::ResourceScope)": {
+      "@scope": null
+    },
+    "Symbol(alchemy::ResourceSeq)": 1,
+    "entrypoint": "src/workers/api.ts",
+    "compatibility": "node",
+    "bindings": {
+      "CORS_ORIGIN": "",
+      "ANTHROPIC_API_KEY": "",
+      "DB": {
+        "type": "hyperdrive",
+        "name": "undoc",
+        "hyperdriveId": "acb0cccb5a62487e93eb04b7c927c5c2",
+        "dev": {
+          "origin": {
+            "@secret": {
+              "version": "v1",
+              "ciphertext": "bz3mxcEYbRkIWY4Dxw5S10vaYQsEgiriPBopS0zNPNxebIJnuq0wwyF2Vjn3XjGh6dqICICRYgwjc1JCZt1TPgu2OkWA/oS3frgMl8BSUC5F3L/ksx18YqY9NjhqCeXcOSBABJADz25LHdzoRl0OjUueI4qndPxnlm2xTBJPdWMPk+1Br86BKdhWjUittQQ=",
+              "iv": "qiF6kzVh+JwG1DaI",
+              "salt": "twyRspTZmMhDEZs3TD4NUw==",
+              "tag": "1mAv+NIZSroWRLtY07ZjjA=="
+            }
+          }
+        }
+      }
+    },
+    "dev": {
+      "hasRemote": false
+    },
+    "name": "aaa-api",
+    "adopt": true,
+    "type": "service",
+    "id": "api",
+    "cwd": "",
+    "compatibilityDate": "2025-10-11",
+    "compatibilityFlags": [
+      "nodejs_compat",
+      "nodejs_compat_populate_process_env"
+    ],
+    "format": "esm",
+    "createdAt": 1766418811973,
+    "updatedAt": 1766419276402,
+    "url": "http://localhost:3001/",
+    "routes": [],
+    "domains": []
+  },
+  "props": {
+    "entrypoint": "src/workers/api.ts",
+    "compatibility": "node",
+    "bindings": {
+      "CORS_ORIGIN": "",
+      "ANTHROPIC_API_KEY": "",
+      "DB": {
+        "type": "hyperdrive",
+        "name": "undoc",
+        "hyperdriveId": "acb0cccb5a62487e93eb04b7c927c5c2",
+        "dev": {
+          "origin": {
+            "@secret": {
+              "version": "v1",
+              "ciphertext": "REmPVgfQaij6kilQ94dQ4p5/O4GP6d/PxQBvt9SbXUx/lX5pFyTxblncUrh+cblcIktOpVyc3YG59RozADyCqXmn1bZ064EbBebeqv7jrKe6mE7umqYZbgd5VSVqLk5y1i6cR5Di0sByJv4eqLUSIv55+z0tO8ZHUMxNyMr83lMNY7LtF5LLJIfoX+908aw=",
+              "iv": "JtjlN3/BhYQbnZ01",
+              "salt": "/0eVqrFOicwGSRVtuXStNg==",
+              "tag": "VtReIq8PxbA5OPGPXOXWSw=="
+            }
+          }
+        }
+      }
+    },
+    "dev": {
+      "port": 3001
+    },
+    "name": "aaa-api",
+    "adopt": true
+  }
+}

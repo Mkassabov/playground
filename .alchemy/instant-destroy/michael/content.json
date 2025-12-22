@@ -1,0 +1,87 @@
+{
+  "kind": "cloudflare::Worker",
+  "id": "content",
+  "fqn": "instant-destroy/michael/content",
+  "seq": 3,
+  "data": {},
+  "status": "updated",
+  "output": {
+    "Symbol(alchemy::ResourceKind)": "cloudflare::Worker",
+    "Symbol(alchemy::ResourceID)": "content",
+    "Symbol(alchemy::ResourceFQN)": "instant-destroy/michael/content",
+    "Symbol(alchemy::ResourceScope)": {
+      "@scope": null
+    },
+    "Symbol(alchemy::ResourceSeq)": 3,
+    "entrypoint": "src/workers/content.ts",
+    "compatibility": "node",
+    "url": "https://aaa-content.michael-a24.workers.dev",
+    "bindings": {
+      "DB": {
+        "type": "hyperdrive",
+        "name": "undoc",
+        "hyperdriveId": "acb0cccb5a62487e93eb04b7c927c5c2",
+        "dev": {
+          "origin": {
+            "@secret": {
+              "version": "v1",
+              "ciphertext": "knYc/5hfOLmJNN5PfOefdaLHC9GymHBU2MNglSg5wMpkZMNktZRGgK2laEKTqK7FJ1ZqfiP83m9uAX/dBWquJyOEl9iPI5oz9Q7VqgfM0mc+Vy+KN/e19+v+nBELYSRY+CtWVGweoaKcE6INc1w8AAh4NevPxoYKsGzQvPGjGB4H3IZ3sDz3jxpz4QmtpHs=",
+              "iv": "LuwVRjP5iFOwKRy2",
+              "salt": "keuoW1kgMN1O4512tLC6WA==",
+              "tag": "qgqJTkGvRqlxxjZERujg6g=="
+            }
+          }
+        }
+      }
+    },
+    "dev": {
+      "hasRemote": true
+    },
+    "name": "aaa-content",
+    "adopt": true,
+    "type": "service",
+    "id": "content",
+    "cwd": "",
+    "compatibilityDate": "2025-10-11",
+    "compatibilityFlags": [
+      "nodejs_compat",
+      "nodejs_compat_populate_process_env"
+    ],
+    "format": "esm",
+    "createdAt": {
+      "@date": "2025-12-22T15:54:42.403Z"
+    },
+    "updatedAt": {
+      "@date": "2025-12-22T16:01:21.339Z"
+    }
+  },
+  "props": {
+    "entrypoint": "src/workers/content.ts",
+    "compatibility": "node",
+    "url": true,
+    "bindings": {
+      "DB": {
+        "type": "hyperdrive",
+        "name": "undoc",
+        "hyperdriveId": "acb0cccb5a62487e93eb04b7c927c5c2",
+        "dev": {
+          "origin": {
+            "@secret": {
+              "version": "v1",
+              "ciphertext": "fgVs7T4yp9Cz1qqTT1Kgu8naVJXYnimq13THj8LN2EFXkWchtQel5uIIwSQ3UHaPxGtGVLGSkobSyN3+yehDBhG/aT4mvnDenJuNTfwafP+Ksio9p/W5g/w7IUoUDO2DfKlGCfbrKjyDMMrW1+3Tx8XV2SzcS7Cv7Gz9VSXfgiHcIK1ptwveWcRUDQo1nUw=",
+              "iv": "VP2PrXxcFTgmyRBP",
+              "salt": "ETK887iJw23cKbrvJpyfGw==",
+              "tag": "K/fcakL2FjQPZLlgQfS8UQ=="
+            }
+          }
+        }
+      }
+    },
+    "dev": {
+      "remote": true,
+      "port": 3002
+    },
+    "name": "aaa-content",
+    "adopt": true
+  }
+}

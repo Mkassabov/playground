@@ -1,11 +1,12 @@
 import { id as nanoid } from "../../../utils/nanoid";
 
+// work here is OUTSIDE the request scope
+const outsideScope = nanoid();
+
 export default {
-  // biome-ignore lint/suspicious/useAwait: its fine
   async fetch(): Promise<Response> {
-    const id = nanoid();
-    const message = `Haiii - patpat2! ${id}`;
-    console.log(message);
-    return new Response(message);
+    // work here is INSIDE the request scope
+    const insideScope = nanoid();
+    return new Response({ outsideScope, insideScope });
   },
 };

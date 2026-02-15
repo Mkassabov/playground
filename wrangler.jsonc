@@ -1,6 +1,6 @@
 {
-  "name": "app-form-builder-michael",
+  "name": "app-oauth-patpat-michael",
   "main": "deployments/alchemy-worker/src/patpat.ts",
-  "compatibility_date": "2025-10-11",
+  "compatibility_date": "2026-01-20",
   "compatibility_flags": []
 }

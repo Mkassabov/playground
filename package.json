@@ -12,8 +12,12 @@
   "workspaces": [
     "deployments/*"
   ],
+  "scripts": {
+    "deploy": "alchemy deploy --profile alchemy",
+    "destroy": "alchemy destroy --profile alchemy"
+  },
   "dependencies": {
     "oxfmt": "^0.5.0",
-    "alchemy": "link:alchemy"
+    "alchemy": "latest"
   }
 }

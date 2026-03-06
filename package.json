@@ -14,6 +14,7 @@
   ],
   "scripts": {
     "deploy": "alchemy deploy --profile alchemy",
+    "dev": "alchemy dev --profile alchemy",
     "destroy": "alchemy destroy --profile alchemy"
   },
   "dependencies": {

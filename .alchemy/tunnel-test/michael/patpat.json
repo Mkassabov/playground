@@ -1,0 +1,40 @@
+{
+  "kind": "cloudflare::Worker",
+  "id": "patpat",
+  "fqn": "tunnel-test/michael/patpat",
+  "seq": 0,
+  "data": {},
+  "status": "updated",
+  "output": {
+    "Symbol(alchemy::ResourceKind)": "cloudflare::Worker",
+    "Symbol(alchemy::ResourceID)": "patpat",
+    "Symbol(alchemy::ResourceFQN)": "tunnel-test/michael/patpat",
+    "Symbol(alchemy::ResourceScope)": {
+      "@scope": null
+    },
+    "Symbol(alchemy::ResourceSeq)": 0,
+    "entrypoint": "./src/patpat.ts",
+    "dev": {
+      "hasRemote": false
+    },
+    "type": "service",
+    "id": "patpat",
+    "name": "tunnel-test-patpat-michael",
+    "cwd": "",
+    "compatibilityDate": "2026-03-01",
+    "compatibilityFlags": [],
+    "format": "esm",
+    "bindings": {},
+    "createdAt": 1772810614738,
+    "updatedAt": 1772810777007,
+    "url": "https://tunnel-test-patpat-michael.michael-a24.workers.dev/",
+    "routes": [],
+    "domains": []
+  },
+  "props": {
+    "entrypoint": "./src/patpat.ts",
+    "dev": {
+      "tunnel": true
+    }
+  }
+}

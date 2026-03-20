@@ -1,0 +1,63 @@
+{
+  "kind": "cloudflare::ContainerApplication",
+  "id": "container",
+  "fqn": "eval/michael/worker/container",
+  "seq": 0,
+  "data": {},
+  "status": "updated",
+  "output": {
+    "Symbol(alchemy::ResourceKind)": "cloudflare::ContainerApplication",
+    "Symbol(alchemy::ResourceID)": "container",
+    "Symbol(alchemy::ResourceFQN)": "eval/michael/worker/container",
+    "Symbol(alchemy::ResourceScope)": {
+      "@scope": null
+    },
+    "Symbol(alchemy::ResourceSeq)": 0,
+    "id": "",
+    "name": "eval-container-michael"
+  },
+  "props": {
+    "type": "container",
+    "id": "container",
+    "name": "eval-container-michael",
+    "className": "EvalContainer",
+    "instanceType": "basic",
+    "observability": {
+      "logs": {
+        "enabled": true
+      }
+    },
+    "sqlite": true,
+    "dev": true,
+    "image": {
+      "Symbol(alchemy::ResourceKind)": "docker::Image",
+      "Symbol(alchemy::ResourceID)": "container",
+      "Symbol(alchemy::ResourceFQN)": "eval/michael/container",
+      "Symbol(alchemy::ResourceScope)": {
+        "@scope": null
+      },
+      "Symbol(alchemy::ResourceSeq)": 0,
+      "kind": "Image",
+      "className": "EvalContainer",
+      "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+          "IMAGE_VERSION": "1.24-alpine"
+        }
+      },
+      "instanceType": "basic",
+      "observability": {
+        "logs": {
+          "enabled": true
+        }
+      },
+      "name": "cloudflare-dev/eval-container-michael",
+      "tag": "latest-1773939569760",
+      "imageRef": "cloudflare-dev/eval-container-michael:latest-1773939569760",
+      "builtAt": 1773939574010
+    },
+    "durableObjects": {
+      "namespaceId": "container"
+    }
+  }
+}

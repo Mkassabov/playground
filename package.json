@@ -2,10 +2,6 @@
   "name": "playground",
   "module": "index.ts",
   "type": "module",
-  "devDependencies": {
-    "@cloudflare/workers-types": "^4.20250805.0",
-    "@types/bun": "latest"
-  },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
@@ -14,10 +10,30 @@
   ],
   "scripts": {
     "deploy": "alchemy deploy --profile alchemy",
-    "destroy": "alchemy destroy --profile alchemy"
+    "destroy": "alchemy destroy --profile alchemy",
+    "dev": "alchemy dev --profile alchemy"
   },
   "dependencies": {
-    "oxfmt": "^0.5.0",
-    "alchemy": "latest"
+    "@cloudflare/containers": "^0.1.1",
+    "@hono/zod-validator": "^0.7.6",
+    "better-auth": "^1.5.5",
+    "hono": "^4.12.7",
+    "jose": "^6.2.1",
+    "pg": "^8.20.0",
+    "postgres": "^3.4.8",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260310.1",
+    "@dotenvx/dotenvx": "^1.54.1",
+    "@types/bun": "^1.3.10",
+    "@types/node": "^25.4.0",
+    "@types/pg": "^8.18.0",
+    "@typescript/native-preview": "^7.0.0-dev.20260311.1",
+    "alchemy": "latest",
+    "miniflare": "^4.20260310.0",
+    "oxfmt": "latest",
+    "vibe-rules": "^0.3.91",
+    "wrangler": "^4.75.0"
   }
 }

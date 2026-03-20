@@ -1,6 +1,29 @@
 {
-  "name": "app-oauth-patpat-michael",
-  "main": "deployments/alchemy-worker/src/patpat.ts",
-  "compatibility_date": "2026-01-20",
-  "compatibility_flags": []
+  "name": "eval-worker-michael",
+  "main": "deployments/worker.ts",
+  "compatibility_date": "2026-03-17",
+  "compatibility_flags": [],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "MY_CONTAINER",
+        "class_name": "EvalContainer"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "EvalContainer"
+      ],
+      "new_classes": []
+    }
+  ],
+  "containers": [
+    {
+      "class_name": "EvalContainer",
+      "image": "D:/worktemp/alchemy/playground/Dockerfile"
+    }
+  ]
 }

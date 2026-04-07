@@ -18,6 +18,6 @@
   },
   "dependencies": {
     "oxfmt": "^0.5.0",
-    "alchemy": "latest"
+    "alchemy": "link:alchemy"
   }
 }

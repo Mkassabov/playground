@@ -1,7 +1,7 @@
 import alchemy from "alchemy";
 import { Worker } from "alchemy/cloudflare";
 
-export const app = await alchemy("test-app", {
+export const app = await alchemy("test-wasm-app", {
   password: "test",
 });
 
